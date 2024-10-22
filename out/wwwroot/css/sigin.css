@@ -1,0 +1,35 @@
+.body-signin {
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-container {
+    max-width: 600px;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.inputform {
+    width: 300px;
+}
+
+.boxinputsubmit {
+    display: flex;
+    justify-content: center;
+}
+
+.btnSign {
+    width: 300px;
+}
+
+.sizebtnSignbox {
+    margin: 0 10px;
+}
+
+.sizebtnSign {
+}

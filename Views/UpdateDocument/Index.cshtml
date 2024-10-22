@@ -1,0 +1,193 @@
+@{
+    int checkItemExti = 0;
+}
+
+@model UpdateBookModel
+
+
+
+<style>
+    .bodyUploadDocument {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #333;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="file"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        background-color: #5e86c3;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold
+    }
+
+    input[type="submit"]:hover {
+        background-color: #1c2769;
+    }
+
+    .FileUploadForm {
+        display: flex;
+        flex-direction: column;
+    @*align-items:center;*@
+        justify-content: center;
+        border: 2px solid #dce4e0;
+        padding: 10px;
+        border-radius: 6px;
+
+    }
+
+    .documentUploaded {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .bodyFileDatailen {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .linkDocumentUploaded {
+        display: block;
+        align-items: center;
+        text-align: center;
+        border: 1px solid #ababab;
+        padding: 8px 10px;
+        border-radius: 3px;
+        width: 100%;
+        overflow-x: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .btnXoaFILE {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        border: 1px solid #ababab;
+        margin-left: 4px;
+        margin-right: 4px;
+        padding: 2px;
+        border-radius: 4px;
+        background-color: #3ba871;
+        color: white;
+        width: 200px;
+        height: 50px;
+    }
+
+    .btnXoaFILE:hover {
+        background-color: #2a7951;
+        color: whitesmoke;
+
+    }
+</style>
+
+<div class="bodyUploadDocument">
+    <div class="container">
+        <h2>ĐIỀU CHỈNH THÔNG TIN TÀI LIỆU</h2>
+        <form asp-action="UpdateFileBookNew" method="post" enctype="multipart/form-data">
+            <input type="hidden" name="Bookid" value="@Model.BookEdit?.BookID" hidden
+                data-bookidDel="@Model.BookEdit?.BookID" id="sendDataBookID" />
+
+            <div class="form-group">
+                <label for="title">Tên tài liệu:</label>
+                <input type="text" id="title" name="title" required maxlength="200" value="@Model.BookEdit?.Title">
+            </div>
+            <div class="form-group">
+                <label for="author">Tác giả:</label>
+                <input type="text" id="author" name="author" maxlength="100" value="@Model.BookEdit?.Author">
+            </div>
+            <div class="form-group">
+                <label for="Kindofbook" style="margin-right: 0px">Thể loại:</label>
+                <select id="Kindofbook" name="Kindofbook"
+                    style="width: 100%; border: 1px solid #c0bebe86; border-radius: 5px; height: 40px;">
+                    @if (Model.GenreLoadData != null && Model.GenreSelectedByBook != null)
+                    {
+                        @foreach (var item in Model.GenreLoadData)
+                        {
+                            @foreach (var genre in Model.GenreSelectedByBook)
+                            {
+                                @if (genre.BookID == Model.BookEdit?.BookID && item.GenreID == genre.GenreID)
+                                {
+                                    <option selected value="@item.GenreID">@item.TenTheLoai</option>
+                                    checkItemExti++;
+                                }
+                            }
+                            if (checkItemExti == 0)
+                            {
+                                <option value="@item.GenreID">@item.TenTheLoai</option>
+                            }
+                            else
+                            {
+                                checkItemExti = 0;
+                            }
+                        }
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="price">Giá:</label>
+                <input type="text" id="price" name="price" step="1000" value="@Model.BookEdit?.Price"
+                    oninput="formatNumberInput()">
+            </div>
+            <div class="form-group FileUploadForm">
+                <div class="documentUploaded">
+                    <label for="linkDocumentUploaded">File tài liệu hiện tại</label>
+                    <a name="linkDocumentUploaded" class="linkDocumentUploaded"
+                        href="~/storage/filedoc/@Model.BookEdit?.FileDoc">@Model.BookEdit?.FileDoc</a>
+                </div>
+                <div class="boxUploadDoc">
+                    <label for="FileDocNew_UserUpload">Cập nhật File tài liệu mới - định dạng PDF</label>
+                    <input type="file" id="fileDoc" name="FileDocNew_UserUpload" accept=".pdf">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="imgThumbnail">Ảnh bìa:</label>
+                <input type="file" id="imgThumbnail" name="imgThumbnail" accept="image/*"
+                    value="@Model.BookEdit?.ImgThumbnail">
+            </div>
+            <input type="submit" value="CẬP NHẬT THÔNG TIN TÀI LIỆU" id="btnPostRequestEditBook">
+        </form>
+    </div>
+</div>
+<script src="~/js/UpdateDocument.js" asp-append-version="true"></script>

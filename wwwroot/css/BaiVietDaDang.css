@@ -1,0 +1,282 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bodypersonalinformation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.bodypersonalinformation .boxbanner {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  flex-direction: row;
+  margin: 5px 0;
+}
+.bodypersonalinformation .boxbanner .title {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 40%;
+  flex-direction: row;
+}
+.bodypersonalinformation .boxbanner .title ion-icon {
+  color: green;
+  font-size: 2em;
+}
+.bodypersonalinformation .boxbanner .title h1 {
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  font-size: 1.4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(65, 66, 75);
+}
+.bodypersonalinformation .boxbanner .searchandupload {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  width: 60%;
+}
+.bodypersonalinformation .boxbanner .searchandupload .boxsearch {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  width: 60%;
+  position: relative;
+}
+.bodypersonalinformation .boxbanner .searchandupload .boxsearch .searchbar {
+  border-radius: 20px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding-right: 25px;
+  border: 2px solid black;
+}
+.bodypersonalinformation .boxbanner .searchandupload .boxsearch ion-icon {
+  position: absolute;
+  font-size: 1.2em;
+  right: 4px;
+  padding: 3px;
+  border-radius: 20px;
+  cursor: pointer;
+  top: 10%;
+}
+.bodypersonalinformation .boxbanner .searchandupload .boxsearch ion-icon:hover {
+  color: #9a9a9a;
+}
+.bodypersonalinformation .boxinfor {
+  height: 80%;
+  width: 100%;
+  margin-top: 20px;
+}
+.bodypersonalinformation .boxinfor .listDocument {
+  height: 540px;
+  width: auto;
+  overflow-y: scroll;
+  list-style-type: none;
+  padding: 0;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument {
+  font-size: 1.2em;
+  cursor: default;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .cometoBlog {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .cometoBlog h5 {
+  color: #4d3737;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .cometoBlog p {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+  color: black;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool {
+  padding: 0;
+  margin: 0 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btndel {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-left: 8px;
+  border-radius: 20%;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btndel ion-icon {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btnedit {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20%;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btnedit ion-icon {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btndel:hover {
+  background-color: #ff5d5d;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btndel:hover ion-icon {
+  color: rgb(0, 0, 0);
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btnedit:hover {
+  background-color: #b3d4ff;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btnedit:hover i {
+  color: rgb(0, 0, 0);
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument:hover {
+  background-color: rgb(243, 243, 230);
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument:not(:last-child) {
+  border-bottom: 2px solid rgb(184, 184, 184);
+}
+.bodypersonalinformation .boxinfor .blog-post-show {
+  background-color: #78a784;
+  padding: 10px;
+  border-radius: 5px;
+  height: 550px;
+  /* Phần đường viền của thanh cuộn */
+  /* Phần "cán" của thanh cuộn */
+  /* Màu "cán" khi hover */
+}
+.bodypersonalinformation .boxinfor .blog-post-show .header-blog-post {
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 15%;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .header-blog-post .boxLeftHeader {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 80%;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .header-blog-post .boxLeftHeader h3 {
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .header-blog-post .boxLeftHeader #BtnBack {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .header-blog-post .boxLeftHeader #BtnBack ion-icon {
+  font-size: 35px;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .header-blog-post .boxLeftHeader #BtnBack ion-icon:hover {
+  color: yellow;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .header-blog-post p {
+  width: 20%;
+  padding: 0;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.468);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .header-blog-post p ion-icon {
+  padding: 0;
+  margin: 0 5px;
+  font-size: 20px;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .header-blog-post p a {
+  padding: 0;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .header-blog-post p a ion-icon {
+  padding: 0;
+  margin: 0 5px;
+  font-size: 25px;
+  color: white;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .blog-content {
+  height: 83%;
+  margin-bottom: 10px;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .blog-content .blog-content-Center {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: rgba(60, 107, 91, 0.4588235294);
+  padding: 10px;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: justify;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .blog-content-Center::-webkit-scrollbar {
+  width: 2px; /* Độ rộng của thanh cuộn */
+  background-color: rgba(47, 122, 111, 0.3058823529);
+}
+.bodypersonalinformation .boxinfor .blog-post-show .blog-content-Center::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.1137254902); /* Màu nền của thanh cuộn */
+  border-radius: 10px;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .blog-content-Center::-webkit-scrollbar-thumb {
+  background: rgba(213, 228, 225, 0.8078431373); /* Màu "cán" của thanh cuộn */
+  border-radius: 10px;
+}
+.bodypersonalinformation .boxinfor .blog-post-show .blog-content-Center::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Màu "cán" khi hover */
+  border-radius: 10px;
+}
+
+/*# sourceMappingURL=BaiVietDaDang.css.map */

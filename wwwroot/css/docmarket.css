@@ -1,0 +1,346 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend:wght@100..900&family=Signika+Negative:wght@300..700&display=swap");
+.box-docmarket {
+  margin-top: 20px;
+}
+.box-docmarket .boxbanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 420px;
+  margin: 10px 0;
+}
+.box-docmarket .boxbanner .boxcategory {
+  flex: 1;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100px;
+  height: 100%;
+  margin-right: 8px;
+}
+.box-docmarket .boxbanner .boxcategory .danhmuctitle {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.box-docmarket .boxbanner .boxcategory .danhmuctitle i {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-docmarket .boxbanner .boxcategory .danhmuctitle h2 {
+  margin: 0 10px;
+  font-size: 22px;
+  font-weight: bolder;
+}
+.box-docmarket .boxbanner .boxcategory .listCategory {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.box-docmarket .boxbanner .boxcategory .listCategory li a,
+.box-docmarket .boxbanner .boxcategory .listCategory li .btndownload {
+  color: black;
+  font-size: 20px;
+}
+.box-docmarket .boxbanner .boxcategory .listCategory li:hover a {
+  color: rgb(40, 109, 228);
+  font-size: 20px;
+  font-weight: bolder;
+}
+.box-docmarket .boxbanner .banner {
+  flex: 3;
+  height: 100%;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.box-docmarket .boxbanner .banner .search-box {
+  display: flex;
+  width: 100%;
+  margin: 10px 0;
+}
+.box-docmarket .boxbanner .banner .search-box input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 16px;
+}
+.box-docmarket .boxbanner .banner .search-box button {
+  padding: 5px 10px;
+  border: 2px solid #ddd;
+  background-color: #000000;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+.box-docmarket .boxbanner .banner .search-box button ion-icon {
+  font-size: 30px;
+}
+.box-docmarket .boxbanner .banner .search-box button:hover {
+  background-color: #b4bec9;
+}
+.box-docmarket .boxbanner .banner img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.box-docmarket .xemnhieu {
+  width: 100hv;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  margin: 20px 0;
+}
+.box-docmarket .xemnhieu .boxtitlexemnhieu {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.box-docmarket .xemnhieu .boxtitlexemnhieu i {
+  margin-right: 10px;
+}
+.box-docmarket .xemnhieu .boxtitlexemnhieu h1 {
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend", sans-serif;
+}
+.box-docmarket .xemnhieu .slider {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+.box-docmarket .xemnhieu .slider .listXemNhieu {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.box-docmarket .xemnhieu .slider .listXemNhieu .itemxemnhieu {
+  color: #000000;
+}
+.box-docmarket .xemnhieu .slider .listXemNhieu .itemxemnhieu a {
+  color: #000000;
+  display: flex;
+  margin-right: 5px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 200px;
+  border: 2px solid rgb(29, 113, 81);
+}
+.box-docmarket .xemnhieu .slider .listXemNhieu .itemxemnhieu a .imgDaiDien {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+.box-docmarket .xemnhieu .slider .listXemNhieu .itemxemnhieu a .imgDaiDien img {
+  width: 180px;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  object-fit: cover;
+}
+.box-docmarket .xemnhieu .slider .listXemNhieu .itemxemnhieu a .infoDoc {
+  padding: 5px;
+  width: 215px;
+  height: 100%;
+  background-color: #ececec;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  flex-direction: column;
+  overflow-x: auto; /* Cho phép cuộn ngang */
+  white-space: wrap; /* Ngăn các mục li xuống dòng */
+}
+.box-docmarket .xemnhieu .slider .listXemNhieu .itemxemnhieu a .infoDoc .page-day {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+.box-docmarket .xemnhieu .slider .listXemNhieu .itemxemnhieu a .infoDoc .page-day p {
+  margin: 0;
+  padding: 0;
+}
+.box-docmarket .xemnhieu .slider .listXemNhieu .itemxemnhieu a .infoDoc .price {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 0 10px 0 0;
+  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  border-radius: 3px;
+}
+.box-docmarket .xemnhieu .slider .listXemNhieu .itemxemnhieu a .infoDoc .price .priceShow,
+.box-docmarket .xemnhieu .slider .listXemNhieu .itemxemnhieu a .infoDoc .price h5 {
+  padding: 0;
+  margin: 0 2px;
+  font-size: 18px;
+}
+.box-docmarket .xemnhieu .slider .listXemNhieu .itemxemnhieu:not(:last-child) {
+  margin-right: 10px;
+}
+.box-docmarket .xemnhieu .slider .listxemnhieu::-webkit-scrollbar {
+  width: 0;
+}
+.box-docmarket .xemnhieu .slider .nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1000;
+}
+.box-docmarket .xemnhieu .slider .left {
+  left: 0;
+}
+.box-docmarket .xemnhieu .slider .right {
+  right: 0;
+}
+.box-docmarket .moicapnhat {
+  width: 100hv;
+  height: 100%;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu i {
+  margin-right: 10px;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu h1 {
+  margin-left: 10px;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend", sans-serif;
+}
+.box-docmarket .moicapnhat .listmoicapnhat {
+  display: flex;
+  flex-wrap: wrap;
+  transition: transform 0.5s ease-in-out;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  border: 1px solid rgb(94, 86, 86);
+  box-sizing: border-box;
+  width: 19.5%;
+  height: 370px;
+  margin: 3px;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a {
+  color: black;
+  width: 100%;
+  height: 100%;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .imgDaiDien {
+  height: 70%;
+  width: 100%;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .imgDaiDien img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .infoDoc {
+  padding: 0 5px;
+  width: 100%;
+  height: 20%;
+  background-color: #ebebeb;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .infoDoc h5 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Hiển thị tối đa 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin: 0;
+  padding: 4px 0;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .price_day {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 10px;
+  width: 100%;
+  height: 10%;
+  background-color: #fff9a9;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .price_day p {
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .price_day .boxPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .price_day .boxPrice h5,
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .price_day .boxPrice p {
+  margin: 0;
+  padding: 0;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .price_day .boxPrice p {
+  font-size: 10px;
+  font-weight: bold;
+  margin: 0 0 0 3px;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemxemnhieu:not(:last-child) {
+  margin-right: 10px;
+}
+.box-docmarket .btnshowall {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box-docmarket .btnshowall .showall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 50px;
+  font-weight: bold;
+  font-size: 24px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(34, 144, 72);
+  color: white;
+}
+
+/*# sourceMappingURL=docmarket.css.map */

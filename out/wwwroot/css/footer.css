@@ -1,0 +1,83 @@
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 20px;
+  min-width: 300px;
+}
+
+.footer-section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1267d5;
+}
+
+.footer-section p,
+.footer-section a,
+.footer-section form,
+.footer-section ul {
+  color: #000000;
+}
+
+.footer-section a {
+  text-decoration: none;
+  color: #1267d5;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 10px 0;
+}
+
+.footer-section form input,
+.footer-section form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-section form button {
+  padding: 10px 20px;
+  background-color: #f9c922;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: left;
+  }
+  .footer-section {
+    margin: 10px 0;
+  }
+}
+.inputContact {
+  background-color: rgba(186, 241, 255, 0.4705882353);
+}
+
+/*# sourceMappingURL=footer.css.map */

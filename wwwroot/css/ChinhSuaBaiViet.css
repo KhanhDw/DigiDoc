@@ -1,0 +1,58 @@
+.article_FormPostBlog {
+  background-color: #5f8a7f;
+  padding: 10px;
+  border-radius: 5px;
+  height: 550px;
+}
+.article_FormPostBlog .form-container {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+.article_FormPostBlog .form-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.article_FormPostBlog .form-container form .form-group {
+  margin-bottom: 15px;
+}
+.article_FormPostBlog .form-container form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+.article_FormPostBlog .form-container form .form-group input[type=text],
+.article_FormPostBlog .form-container form .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+}
+.article_FormPostBlog .form-container form .form-group textarea {
+  height: 320px;
+  max-height: 370px;
+  resize: vertical;
+}
+.article_FormPostBlog .form-container form .BtnBackAndPost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.article_FormPostBlog .form-container form .BtnBackAndPost a,
+.article_FormPostBlog .form-container form .BtnBackAndPost button {
+  background-color: #374b47;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+  border-radius: 10px;
+}
+.article_FormPostBlog .form-container form .BtnBackAndPost a:hover,
+.article_FormPostBlog .form-container form .BtnBackAndPost button:hover {
+  background-color: #b3b3b3;
+}
+
+/*# sourceMappingURL=ChinhSuaBaiViet.css.map */

@@ -1,0 +1,45 @@
+@{
+    Layout = "~/Views/Shared/_BaiVietDaDangLayout.cshtml";
+    ViewData["Title"] = "Quản lý tài liệu";
+}
+<script src="~/js/BaiVietDaDang.js" asp-append-version="true"></script>
+
+@model List<WebApplication1.Models.Blog>
+
+
+<link rel="stylesheet" href="~/css/BaiVietDaDang.css" asp-append-version="true" />
+
+
+<div id="blog-post-show" class="blog-post-show">
+    @foreach (var item in Model)
+
+    {
+        <div class="header-blog-post">
+            <div class="boxLeftHeader">
+                <a href="/account/BaiVietDaDang" id="BtnBack"><ion-icon name="arrow-back-circle-outline"></ion-icon></a>
+                @* <h3 id="NameBlog">@Model.BlogName</h3> *@
+                <h3 id="NameBlog">@item.BlogName</h3>
+            </div>
+            <p>
+                <a href="#" hidden>
+                    <ion-icon name="bookmark-outline"></ion-icon>
+                </a>
+                <a href="#">
+                    <ion-icon name="link-outline"></ion-icon>
+                </a>
+            </p>
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                    <ion-icon name="eye"></ion-icon>
+                    <p style="margin-left: 10px;" id="NumberOfView">@item.BlogViews</p>
+                </div>
+                <span id="dateCreateBlog">@item.CreatedDate.ToString("dd-MM-yyyy")</span>
+            </div>
+        </div>
+        <div class="blog-content" id="blog-content">
+            <p class="blog-content-Center" id="blog-content-Center">
+                @item.BlogContent
+            </p>
+        </div>
+    }
+</div>

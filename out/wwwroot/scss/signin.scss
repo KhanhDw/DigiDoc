@@ -1,0 +1,60 @@
+.body-signin {
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    margin: 20px 0;
+}
+
+.login-container {
+    max-width: 600px;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+.inputform {
+    width: 300px;
+}
+
+.boxinputpassword {
+    position: relative;
+    padding: 0;
+    margin: 0;
+
+    .showpassword {
+        width: 100%;
+        height: 100%;
+        border: none;
+
+        i {
+            position: absolute;
+            top: 45%;
+            transform: translateY(-50%);
+            color: rgb(142, 127, 127);
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            z-index: 1000;
+            right: 5px;
+            height: 0px; /* Thẻ này không có chiều cao */
+        }
+        i:hover {
+            color: #000000;
+        }
+    }
+}
+
+.boxinputsubmit {
+    display: flex;
+    justify-content: center;
+}
+
+.btnSign {
+    width: 300px;
+}
+
+.sizebtnSignbox {
+    margin: 0 10px;
+}

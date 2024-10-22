@@ -1,0 +1,85 @@
+@{
+
+}
+@model List<BooksWithGenresModel>
+
+
+<link rel="stylesheet" href="~/css/DocumentsManage.css" asp-append-version="true" />
+
+<div class="bodyManageDocuments">
+    <div class="container">
+        <div class="boxheader_Document">
+            <h1>Quản lý Sách</h1>
+            <div class="searchandupload">
+                <div class="boxsearch">
+                    <form asp-action="Index" asp-controller="DocumentsManage" method="post">
+                        <input type="text" class="searchbar" name="SearchBookInManagePage_content" required>
+                        <button class="btnSearchQLB" type="submit"><ion-icon name="search"></ion-icon></button>
+                    </form>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <a href="/UploadDocument" class="btn">Thêm sách mới</a>
+            </div>
+        </div>
+        <div class="book-list">
+            @foreach (var item in Model)
+            {
+                <div class="book-card">
+                    <img src="~/storage/thumnail/@item.ImgThumbnail?height=200&width=300" alt="Bìa sách Đắc Nhân Tâm" class="book-image">
+                    <a href="/DetailDoc/@item.BookID"><h2 class="book-title">@item.Title</h2></a>
+                    <p class="book-author" style="font-weight: bold;">Tác giả: @item.Author</p>
+                    <div class="boxPrice" style=" margin: 0 0 5px 0px; display: flex; align-items: center; justify-content: space-between;">
+                        <p class="book-price" style="margin-left: 20px; padding: 0; margin: 0;">Giá: </p>
+                        <div class="boxPirce" style=" display: flex; align-items: center;"><p style="margin: 0 0 0 2px; padding: 0 2px; border: 1px solid rgb(213, 191, 191); border-radius: 6px;" class="Price format-number">@item.Price</p><p class="DonVi_VND" style="margin: 0 0 0 2px; padding: 0 2px;">VNĐ</p></div>
+                    </div>
+                    <div class="boxtheloai" style="margin: 0 0 5px 0px; display: flex; align-items: center; justify-content: space-between;">
+                        <p class="book-genre" style="margin-left: 20px; padding: 0; margin: 0;">Thể loại:</p> 
+                        <p style="margin: 0 0 0 10px; padding: 0 2px; border: 1px solid rgb(213, 191, 191); border-radius: 6px;">@item.TenTheLoai</p>
+                    </div>
+                    <div class="boxtheloai" style="margin: 0 0 5px 0px; display: flex; align-items: center; justify-content: space-between;">
+                        <p class="book-genre" style="margin-left: 20px; padding: 0; margin: 0;">Người đăng:</p> 
+                        <a href="/ProfileUser/@item.UserID" style="margin: 0 0 0 10px; padding: 0 2px; border: 1px solid rgb(213, 191, 191); border-radius: 6px;">@item.UserNameUploadFile</a>
+                    </div>
+                    <div class="box-btnEdit-DaBan">
+                        <a href="UpdateDocument/Edit/@item.BookID" class="btn">Chỉnh sửa</a>
+                       <div class="downloadAndDayupload">
+                            <p>Ngày đăng: @item.CreatedDate.ToString("dd-MM-yyyy")</p>
+                            <p class="DaBan"><ion-icon name="download-outline"></ion-icon> 20</p>
+                       </div>
+                    </div>
+
+                     <div class="btnDelBook">
+                        <form asp-action="RemoveBook" method="post" id="formDeleteBook">
+                            <input type="text" name="idBookDel" id="idBookDel" hidden value="@item.BookID">
+                            <button class="btnDel" type="submit"><ion-icon name="close-outline"></ion-icon></button>
+                        </form>
+                    </div>
+                </div>
+
+               
+                
+            }
+
+
+@*             
+            <div class="book-card">
+                <img src="~/img/hinhtam.png?height=200&width=300" alt="Bìa sách Tuổi Trẻ Đáng Giá Bao Nhiêu"
+                    class="book-image">
+                <h2 class="book-title">Tuổi Trẻ Đáng Giá Bao Nhiêu</h2>
+                <p class="book-author">Tác giả: Rosie Nguyễn</p>
+                <p class="book-price">Giá: 70.000 VNĐ</p>
+                <p class="book-genre">Thể loại: Kỹ năng sống</p>
+                <div class="box-btnEdit-DaBan">
+                    <button class="btn">Chỉnh sửa</button>
+                    <p class="DaBan">Đã bán: 20</p>
+                </div>
+            </div> *@
+        </div>
+        <div class="action-buttons">
+            <h1></h1>
+            <a href="/UploadDocument" class="btn">Thêm sách mới</a>
+        </div>
+    </div>
+</div>
+<script src="~/js/DocumentsManage.js" asp-append-version="true"></script>

@@ -1,0 +1,176 @@
+.bodyManageDocuments {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+.bodyManageDocuments .container {
+  max-width: 1200px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.bodyManageDocuments .container .boxheader_Document {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.bodyManageDocuments .container .boxheader_Document h1 {
+  color: #333;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.bodyManageDocuments .container .boxheader_Document .searchandupload {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+}
+.bodyManageDocuments .container .boxheader_Document .searchandupload .boxsearch {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  width: 60%;
+  position: relative;
+}
+.bodyManageDocuments .container .boxheader_Document .searchandupload .boxsearch .searchbar {
+  border-radius: 5px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding-right: 25px;
+  border: 2px solid rgb(145, 135, 135);
+}
+.bodyManageDocuments .container .boxheader_Document .searchandupload .boxsearch .btnSearchQLB {
+  position: absolute;
+  right: 0px;
+  top: 2px;
+  background-color: transparent;
+  border: none;
+  width: 10%;
+  height: 100%;
+  border-radius: 50%;
+}
+.bodyManageDocuments .container .boxheader_Document .searchandupload .boxsearch .btnSearchQLB ion-icon {
+  font-size: 1.2em;
+  right: 4px;
+  padding: 3px;
+  border-radius: 20px;
+  cursor: pointer;
+  top: 10%;
+}
+.bodyManageDocuments .container .boxheader_Document .searchandupload .boxsearch .btnSearchQLB ion-icon:hover {
+  color: #9a9a9a;
+}
+.bodyManageDocuments .container .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.book-list .book-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #fff;
+}
+.book-list .book-card .book-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #cfcfcf;
+}
+.book-list .book-card .book-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+.book-list .book-card .book-author,
+.book-list .book-card .book-price,
+.book-list .book-card .book-genre {
+  margin: 5px 0;
+}
+.book-list .book-card .book-description {
+  text-align: justify;
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #666;
+}
+.book-list .book-card .box-btnEdit-DaBan {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.book-list .book-card .box-btnEdit-DaBan .downloadAndDayupload {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  align-items: end;
+  margin: 0;
+  padding: 0;
+}
+.book-list .book-card .box-btnEdit-DaBan .downloadAndDayupload p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  color: #2b0f0f;
+}
+.book-list .book-card .DaBan {
+  margin: 0;
+  padding: 0;
+}
+.book-list .btnDelBook {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.book-list .btnDelBook form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.book-list .btnDelBook form .btnDel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(90, 64, 64);
+  background-color: rgb(233, 175, 175);
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  transition: background-color 0.3s ease-in-out;
+}
+.book-list .btnDelBook form .btnDel:hover {
+  background-color: rgb(255, 94, 0);
+}
+
+.btn {
+  display: flex;
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/*# sourceMappingURL=DocumentsManage.css.map */

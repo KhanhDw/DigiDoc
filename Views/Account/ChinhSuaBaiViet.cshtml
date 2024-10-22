@@ -1,0 +1,31 @@
+@{
+    Layout = "~/Views/Shared/_BaiVietDaDangLayout.cshtml";
+    ViewData["Title"] = "Quản lý tài liệu";
+}
+@model List<WebApplication1.Models.Blog>
+
+
+<link rel="stylesheet" href="~/css/ChinhSuaBaiViet.css" asp-append-version="true" />
+
+
+@foreach (var item in Model)
+
+{
+    <div id="article_FormPostBlog" class="article_FormPostBlog">
+        <div class="form-container">
+            <div class="form-group">
+                <label for="titleBlog">Nhập tiêu đề cho bài viết</label>
+                <input type="text" id="title" name="titleBlog" required value="@item.BlogName">
+            </div>
+            <div class="form-group">
+                <label for="contentBlog">Nội dung bài viết</label>
+                <textarea id="content" name="contentBlog" required>@item.BlogContent</textarea>
+            </div>
+            <div class="BtnBackAndPost">
+                <a href="/account/BaiVietDaDang" id="btnBackViewPost">Hủy</a>
+                <button id="SubmitEditBlog" data-idBlog="@item.BlogID">Đăng bài</button>
+            </div>
+        </div>
+    </div>
+}
+<script src="~/js/ChinhSuaBaiViet.js" asp-append-version="true"></script>

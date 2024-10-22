@@ -1,0 +1,215 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Chi tiết";
+}
+
+@model WebApplication1.Models.BookGenreViewModel
+
+
+<div id="scrBook" hidden data-scrBook="@Model.BookShow?.FileDoc"></div>
+<script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.16.105/build/pdf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<link rel="stylesheet" href="~/css/docdetail.css" asp-append-version="true" />
+
+
+<div class="container body-detail-doc">
+    <div class="boxheaderdetail">
+        <button onclick="window.history.back();" class="btnback">
+            <ion-icon name="arrow-back-outline"></ion-icon>
+        </button>
+        <div class="detail">
+            <div class="document">
+                @* <embed id="pdfFrame" class="viewfile" src="~/storage/filedoc/@Model.BookShow?.FileDoc" /> *@
+                @* <div class="che"></div> *@
+                <div class="btnNavigationPage">
+                    <div class="top-bar">
+                        <span class="page-info">
+                            Trang <span id="page-num"></span> / <span id="page-count"></span>
+                        </span>
+                        <div class="boxbtnNextAndPrePage">
+                            <button class="btn" id="prev-page">
+                                <i class="fas fa-arrow-circle-left"></i> Trang trước
+                            </button>
+                            <button class="btn" id="next-page">
+                                Trang sau <i class="fas fa-arrow-circle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="pdfView">
+                    <canvas id="pdf-render"></canvas>
+                </div>
+
+            </div>
+            <div class="boxtitle">
+                <div class="box-number-of-download-and-view">
+                    <a hidden class="btnFUll" href="~/storage/filedoc/doc1.pdf" target="_blank">
+                        <ion-icon name="scan-outline"></ion-icon>
+                    </a>
+                    <div hidden class="number-view">
+                        <ion-icon name="eye-outline"></ion-icon>
+                        <p>10</p>
+                    </div>
+                    <div hidden class="number-download">
+                        <ion-icon name="download-outline"></ion-icon>
+                        <p>20</p>
+                    </div>
+                    <div class="btndownload" id="showOverlay">
+                        <ion-icon name="download-outline"></ion-icon>
+                        <h5>Tải xuống</h5>
+                    </div>
+
+
+                    @if (Model.bokSave == 1 && Model.userid != -1)
+                    {
+                        <a class="btnSaved" href="#" id="btnSave">
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                            <h5 id="titleBtnSave" data-book-id="@Model.idbookSaved" data-user-id="@Model.userid">Đã Lưu</h5>
+                        </a>
+                    }
+                    else
+                    {
+
+                        <a class="btnSave" href="#" id="btnSave">
+                            <ion-icon name="bookmark-outline"></ion-icon>
+                            <h5 id="titleBtnSave" data-book-id="@Model.idbookSaved" data-user-id="@Model.userid">Lưu</h5>
+                        </a>
+                    }
+                </div>
+
+                <div class="title">
+                    <div class="boxinfor">
+                        <h4>@Model.BookShow?.Title</h4>
+                        <div class="theloaiAndGia">
+                            <div class="theloai">
+                                <h5>Lĩnh vực</h5>
+                                <ul class="itemtheloai">
+                                    @if (Model.GenreShow != null && Model.GenreShow.Any())
+                                    {
+                                        @foreach (var genre in @Model.GenreShow)
+                                        {
+                                            <li>
+                                                <h5>@genre</h5>
+                                            </li>
+                                        }
+                                    }
+                                </ul>
+                            </div>
+                            <div class="boxAvarta_BtnComment">
+                                <a class="box-avartar-author" href="/ProfileUser/@Model.userAuthor?.UserID">
+                                    <img src="~/img/hinhtam.png" alt="">
+                                    <h5>@Model.userAuthor?.Username</h5>
+                                </a>
+                                <div class="Boxprice">
+                                    <h5>Giá:</h5>
+                                    <h5 class="priceShow">@Model.BookShow?.Price</h5>
+                                    <h5>VND</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="/PostComment" method="post">
+                        @Html.AntiForgeryToken() <!-- chống tấn công CSRF (Cross-Site Request Forgery). -->
+                        <div class="boxInputComment_BtnComment">
+                            <div class="boxInput">
+                                <input hidden type="text" name="BookIDComment" value="@Model.BookShow?.BookID">
+                                <input type="text" placeholder="Nhập bình luận" class="inputComment"
+                                    name="contentOfCommentFromUser" required>
+                            </div>
+                            <button class="BtnPostComment" type="submit">
+                                <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+                                <h5>Bình luận</h5>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="commentDetail">
+                    <div class="comment">
+                        @if (Model.CommentsOfBook != null)
+                        {
+                            @foreach (var comment in Model.CommentsOfBook.AsEnumerable().Reverse())
+                            {
+                                <div class="box-comment">
+                                    <div class="box-avartar">
+                                        <img src="~/img/hinhtam.png" alt="">
+                                        <div class="boxInforUserName">
+                                            <h5 class="nameUser">@comment.UserName</h5>
+                                            <p class="nameUser">@comment.CommentDate</p>
+                                        </div>
+                                    </div>
+                                    <p class="box-content">
+                                        @comment.Content
+                                    </p>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+            <div id="overlay" class="overlay">
+                <div id="notification" class="notification"><span>Điểm của bạn không đủ để tải tài liệu
+                        này!!</span><br><span>vui lòng nạp thêm
+                        điểm</span></div>
+                <div class="overlay-content">
+
+                    <div class="containItem">
+                        <h4>Xác nhận mua hàng</h4>
+                        <div class="listOrder">
+                            <h5>Danh sách đơn hàng</h5>
+                            <ul class="listItem">
+                                <li class="item">
+                                    <div class="imgbox">
+                                        <img src="~/storage/thumnail/@Model.BookShow?.ImgThumbnail" alt="">
+                                    </div>
+                                    <div class="inforDoc">
+                                        <h5>@Model.BookShow?.Title</h5>
+                                        <div class="Boxprice">
+                                            <h5>Giá: </h5>
+                                            <h5 class="priceShow">@Model.BookShow?.Price </h5>
+                                            <h5>VND</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="infoOrder">
+                        <div class="chitietthanhtoan">
+                            <h4>Thông tin đơn hàng</h4>
+                            <div class="infordetailbox">
+                                <div class="infordetail">
+                                    <h5>Tổng số tài liệu: </h5>
+                                    <h5>1</h5>
+                                </div>
+                                <div class="infordetail">
+                                    <h5>Tổng giá tiền: </h5>
+                                    <h5 class="priceShow">@Model.BookShow?.Price</h5>
+                                    <h5>VND</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="closeOverlay">🞬</button>
+                        @if (Model.DiemTaiFile >= Model.BookShow?.Price)
+                        {
+                            <a id="thanhtoan1" href="/DetailDoc/download/@Model.BookShow?.BookID">Xác
+                                nhận mua và tải
+                                xuống</a>
+                        }
+                        else
+                        {
+                            <a id="thanhtoan">Xác
+                                nhận mua và tải
+                                xuống</a>
+                        }
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="~/js/detail.js" asp-append-version="true"></script>

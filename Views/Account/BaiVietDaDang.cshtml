@@ -1,0 +1,57 @@
+@{
+    Layout = "~/Views/Shared/_BaiVietDaDangLayout.cshtml";
+    ViewData["Title"] = "Quản lý tài liệu";
+}
+
+@model List<Blog>
+
+<link rel="stylesheet" href="~/css/BaiVietDaDang.css" asp-append-version="true" />
+
+<ul class="listDocument" id="listDocument">
+    @foreach (var item in Model)
+    {
+        <li class="itemlistdocument">
+            <a class="cometoBlog" href="/account/BaiVietDaDang/Docbaiviet/@item.BlogID" data-idblog="@item.BlogID">
+                @* <a class="cometoBlog" data-idblog="@item.BlogID"> *@
+                <h5>@item.BlogName</h5>
+                <p>Ngày đăng: @item.CreatedDate.ToString("dd-MM-yyyy")</p>
+            </a>
+            <div class="boxtool">
+                <a href="/account/BaiVietDaDang/ChinhSuaBaiViet/@item.BlogID" class="btnedit"><i
+                        class="fa-regular fa-pen-to-square"></i></a>
+                <a href="#" class="btndel" data-idblog="@item.BlogID"><ion-icon name="trash-outline"></ion-icon></a>
+            </div>
+        </li>
+    }
+</ul>
+
+@*
+<div id="blog-post-show" class="blog-post-show" hidden>
+<div class="header-blog-post">
+<div class="boxLeftHeader">
+<a href="#" id="BtnBack"><ion-icon name="arrow-back-circle-outline"></ion-icon></a>
+<h3 id="NameBlog">tên bài blog</h3>
+</div>
+<p>
+<a href="#" hidden>
+<ion-icon name="bookmark-outline"></ion-icon>
+</a>
+<a href="#">
+<ion-icon name="link-outline"></ion-icon>
+</a>
+</p>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+<div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+<ion-icon name="eye"></ion-icon>
+<p style="margin-left: 10px;" id="NumberOfView">10</p>
+</div>
+<span id="dateCreateBlog">22/07/2003</span>
+</div>
+</div>
+<div class="blog-content" id="blog-content">
+<p class="blog-content-Center" id="blog-content-Center">
+nội dung này sẽ bị thay thế bởi data server
+</p>
+</div>
+</div> *@
+<script src="~/js/BaiVietDaDang.js" asp-append-version="true"></script>

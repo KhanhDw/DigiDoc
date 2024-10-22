@@ -1,0 +1,197 @@
+@{
+    ViewData["Title"] = "Sách theo lĩnh vực";
+    int? pageNumber = ViewData["PageNumber"] as int?;
+    int currentPageNumber = pageNumber ?? 1;
+}
+@* @using Microsoft.AspNetCore.Http *@
+@model PaginatedList<WebApplication1.Models.Book>
+@* @model List<WebApplication1.Models.Book> *@
+
+<link rel="stylesheet" href="~/css/CategoryBook.css" asp-append-version="true" />
+@* <link rel="stylesheet" href="@ViewBag.CssPath" asp-append-version="true"> *@
+<div class="container box-docmarket">
+    <div class="boxcategory">
+        <div class="category">
+            <div class="danhmuctitle">
+                <i class="fa-solid fa-bars fa-lg"></i>
+                <h2>DANH MỤC</h2>
+            </div>
+            <ul class="listCategory">
+                <li><a href="/CategoryBook/"><i class="bi bi-caret-right"></i> Tất cả</a></li>
+                <li><a href="/CategoryBook/ban-hang-va-kinh-doanh"><i class="bi bi-caret-right"></i> Bán hàng & Kinh
+                        doanh</a></li>
+                <li><a href="/CategoryBook/phat-trien-ban-than"><i class="bi bi-caret-right"></i> Phát triển bản
+                        thân</a>
+                </li>
+                <li><a href="/CategoryBook/IT-va-lap-trinh"><i class="bi bi-caret-right"></i> IT và lập trình</a></li>
+                <li><a href="/CategoryBook/ke-toan-thue-tai-chinh"><i class="bi bi-caret-right"></i> Kế toán, Thuế & Tài
+                        chính</a></li>
+                <li><a href="/CategoryBook/kien-truc-va-xay-dung"><i class="bi bi-caret-right"></i> Kiến trúc và xây
+                        dựng</a></li>
+                <li><a href="/CategoryBook/luat-phap-ly"><i class="bi bi-caret-right"></i> Luật & Pháp lý</a></li>
+                <li><a href="/CategoryBook/Marketing-truyen-thong"><i class="bi bi-caret-right"></i> Marketing & Truyền
+                        thông</a>
+                </li>
+                <li><a href="/CategoryBook/thiet-ke"><i class="bi bi-caret-right"></i> Thiết kế</a></li>
+                <li><a href="/CategoryBook/khac"><i class="bi bi-caret-right"></i> Khác</a></li>
+            </ul>
+        </div>
+        <div class="category">
+            <div class="danhmuctitle">
+                <i class="fa-solid fa-bars fa-lg"></i>
+                <h2>Loại tài liệu</h2>
+            </div>
+            <ul class="listCategory">
+                <li><a href="#"><i class="bi bi-caret-right"></i> Miễn phí</a></li>
+                <li><a href="#"><i class="bi bi-caret-right"></i> Trả phí</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="moicapnhat">
+        <div class="boxtitlexemnhieu">
+            <div class="titlebook">
+                <ion-icon name="apps-sharp"></ion-icon>
+                <h1>@ViewBag.danhmuc</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="Nhập nội dung cần tìm...">
+                <button type="submit"><ion-icon name="search"></ion-icon></button>
+            </div>
+        </div>
+
+        <ul class="listmoicapnhat ">
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var book in Model)
+                {
+                    <li class="itemmoicapnhat">
+                        <a href="/detaildoc/@book.BookID">
+                            <div class="imgDaiDien">
+                                <img src="~/storage/thumnail/@book.ImgThumbnail">
+                            </div>
+                            <div class="infoDoc">
+                                <h5>@book.Title</h5>
+                            </div>
+                            <div class="price_day">
+                                <p><ion-icon name="download-outline"></ion-icon>@book.DownloadFile</p>
+                                <div class="boxPrice">
+                                    <h5 class="priceShow">@book.Price</h5>
+                                    <p>VND</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                }
+
+            }
+        </ul>
+        <br />
+
+
+
+        <div class="pagination">
+            <div class="d-flex justify-content-between align-items-center mt-3">
+                @* <div>
+                Tổng số: @Model.TotalItems trang
+                (Trang @Model.PageIndex/@Model.TotalPages)
+                </div> *@
+
+                <nav aria-label="Page navigation">
+                    <ul class="pagination mb-0">
+                        @if (Model != null)
+                        {
+
+                            @if (Model.HasPreviousPage)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="/CategoryBook/trang/@(Model.PageIndex - 1)">Trước</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item disabled">
+                                    <span class="page-link">Trước</span>
+                                </li>
+                            }
+
+                            int startPage = Math.Max(1, Model.PageIndex - 2);
+                            int endPage = Math.Min(Model.TotalPages, Model.PageIndex + 2);
+
+                            @if (startPage > 1)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="/CategoryBook/trang/1">1</a>
+                                </li>
+                                if (startPage > 2)
+                                {
+                                    <li class="page-item disabled">
+                                        <span class="page-link">...</span>
+                                    </li>
+                                }
+                            }
+
+                            @for (int i = startPage; i <= endPage; i++)
+                            {
+                                if (i == Model.PageIndex)
+                                {
+                                    <li class="page-item active">
+                                        <span class="page-link">@i</span>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" href="/CategoryBook/trang/@i">@i</a>
+                                    </li>
+                                }
+                            }
+
+                            @if (endPage < Model.TotalPages)
+                            {
+                                if (endPage < Model.TotalPages - 1)
+                                {
+                                    <li class="page-item disabled">
+                                        <span class="page-link">...</span>
+                                    </li>
+                                }
+                                <li class="page-item">
+                                    <a class="page-link" href="/CategoryBook/trang/@Model.TotalPages">@Model.TotalPages</a>
+                                </li>
+                            }
+
+                            @if (Model.HasNextPage)
+                            {
+                                <li class="page-item">
+                                    <a class="page-link" href="/CategoryBook/trang/@(Model.PageIndex + 1)">Sau</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="page-item disabled">
+                                    <span class="page-link">Sau</span>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+
+
+        @* <div class="pagination"> *@
+
+        @* <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)">&laquo;</a> *@
+        @*<a href="#" class="active">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a> *@
+        @* <a asp-action="Index" asp-route-pageNumber="@(Model.PageIndex + 1)">&raquo;</a> *@
+
+        @* </div> *@
+    </div>
+
+</div>
+<script src="~/js/CategoryBook.js" asp-append-version="true"></script>

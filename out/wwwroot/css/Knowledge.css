@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.bodypersonalinformation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.bodypersonalinformation .boxbanner {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 100%;
+  height: 20%;
+  flex-direction: row;
+  margin: 5px 0;
+}
+.bodypersonalinformation .boxbanner .title {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 40%;
+  flex-direction: row;
+}
+.bodypersonalinformation .boxbanner .title ion-icon {
+  color: green;
+  font-size: 2em;
+}
+.bodypersonalinformation .boxbanner .title h1 {
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  font-size: 1.4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgb(65, 66, 75);
+}
+.bodypersonalinformation .boxbanner .searchandupload {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  width: 60%;
+}
+.bodypersonalinformation .boxbanner .searchandupload .boxsearch {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  width: 60%;
+  position: relative;
+}
+.bodypersonalinformation .boxbanner .searchandupload .boxsearch .searchbar {
+  border-radius: 20px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding-right: 25px;
+  border: 2px solid black;
+}
+.bodypersonalinformation .boxbanner .searchandupload .boxsearch ion-icon {
+  position: absolute;
+  font-size: 1.2em;
+  right: 4px;
+  padding: 3px;
+  border-radius: 20px;
+  cursor: pointer;
+  top: 10%;
+}
+.bodypersonalinformation .boxbanner .searchandupload .boxsearch ion-icon:hover {
+  color: #9a9a9a;
+}
+.bodypersonalinformation .boxinfor {
+  height: 80%;
+  width: 100%;
+  margin-top: 20px;
+}
+.bodypersonalinformation .boxinfor .listDocument {
+  height: 540px;
+  width: auto;
+  overflow-y: scroll;
+  list-style-type: none;
+  padding: 0;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument {
+  font-size: 1.2em;
+  cursor: default;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument h5 {
+  color: #4d3737;
+  padding: 0;
+  margin: 0;
+  width: 40%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument p {
+  padding: 0;
+  margin: 0;
+  font-size: 0.9rem;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool {
+  padding: 0;
+  margin: 0 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btndel {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-left: 8px;
+  border-radius: 20%;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btndel ion-icon {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btnedit {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20%;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btnedit ion-icon {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btndel:hover {
+  background-color: #ff5d5d;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btndel:hover ion-icon {
+  color: rgb(0, 0, 0);
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btnedit:hover {
+  background-color: #b3d4ff;
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument .boxtool .btnedit:hover i {
+  color: rgb(0, 0, 0);
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument:hover {
+  background-color: rgb(243, 243, 230);
+}
+.bodypersonalinformation .boxinfor .listDocument .itemlistdocument:not(:last-child) {
+  border-bottom: 2px solid rgb(184, 184, 184);
+}
+
+/*# sourceMappingURL=Knowledge.css.map */

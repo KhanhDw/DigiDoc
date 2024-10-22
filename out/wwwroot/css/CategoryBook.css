@@ -1,0 +1,221 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend:wght@100..900&family=Signika+Negative:wght@300..700&display=swap");
+.box-docmarket {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+}
+.box-docmarket .boxcategory {
+  margin-right: 8px;
+  width: 20%;
+}
+.box-docmarket .boxcategory .category {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+  flex-direction: column;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+}
+.box-docmarket .boxcategory .category .danhmuctitle {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-left: 15px;
+  width: 100%;
+}
+.box-docmarket .boxcategory .category .danhmuctitle i {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.box-docmarket .boxcategory .category .danhmuctitle h2 {
+  margin: 0 10px;
+  font-size: 17px;
+  font-weight: bolder;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  text-transform: uppercase;
+}
+.box-docmarket .boxcategory .category .listCategory {
+  list-style-type: none;
+  padding: 0;
+  padding-left: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+.box-docmarket .boxcategory .category .listCategory li {
+  display: flex;
+  justify-content: left;
+}
+.box-docmarket .boxcategory .category .listCategory li a {
+  color: black;
+  font-size: 17px;
+  flex: 1;
+}
+.box-docmarket .boxcategory .category .listCategory li i {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.box-docmarket .boxcategory .category .listCategory li:hover a {
+  color: rgb(40, 109, 228);
+  font-size: 17px;
+  font-weight: 500;
+}
+.box-docmarket .moicapnhat {
+  width: 80%;
+  height: 100%;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 10px 0;
+  width: 100%;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu .titlebook {
+  width: 60%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu .titlebook ion-icon {
+  margin-right: 10px;
+  font-size: 26px;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu .titlebook h1 {
+  margin-left: 10px;
+  font-size: 26px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend", sans-serif;
+  width: 100%;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu .search-box {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 40%;
+  margin: 10px 0;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu .search-box input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 16px;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu .search-box button {
+  padding: 5px 10px;
+  border: 2px solid #ddd;
+  background-color: #000000;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu .search-box button ion-icon {
+  font-size: 30px;
+}
+.box-docmarket .moicapnhat .boxtitlexemnhieu .search-box button:hover {
+  background-color: #b4bec9;
+}
+.box-docmarket .moicapnhat .listmoicapnhat {
+  display: flex;
+  flex-wrap: wrap;
+  transition: transform 0.5s ease-in-out;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  box-sizing: border-box;
+  width: 20%;
+  padding: 5px;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a {
+  color: black;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .imgDaiDien img {
+  width: 100%;
+  height: 100% px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .infoDoc {
+  padding: 5px;
+  width: 100%;
+  height: 90px;
+  background-color: #ebebeb;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: left;
+  flex-direction: column;
+  overflow-x: auto; /* Cho phép cuộn ngang */
+  white-space: wrap; /* Ngăn các mục li xuống dòng */
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .infoDoc h5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.3; /* Adjust line height as needed */
+  max-height: 4em; /* Adjust according to your line height */
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .infoDoc .page-day {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemmoicapnhat a .infoDoc .page-day p {
+  margin: 0;
+  padding: 0;
+}
+.box-docmarket .moicapnhat .listmoicapnhat .itemxemnhieu:not(:last-child) {
+  margin-right: 10px;
+}
+.box-docmarket .moicapnhat .pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+.box-docmarket .moicapnhat .pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+  transition: background-color 0.3s;
+}
+.box-docmarket .moicapnhat .pagination a.active {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+.box-docmarket .moicapnhat .pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+/*# sourceMappingURL=CategoryBook.css.map */

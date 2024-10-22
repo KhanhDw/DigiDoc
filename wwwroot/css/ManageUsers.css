@@ -1,0 +1,131 @@
+@charset "UTF-8";
+.bodyManageUsers {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+.bodyManageUsers .container {
+  max-width: 1300px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.bodyManageUsers .container .boxHeaderManageUser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.bodyManageUsers .container .boxHeaderManageUser h1 {
+  color: #333;
+  text-align: center;
+}
+.bodyManageUsers .container .boxHeaderManageUser .searchandupload {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  width: 50%;
+}
+.bodyManageUsers .container .boxHeaderManageUser .searchandupload .boxsearch {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  width: 60%;
+  position: relative;
+}
+.bodyManageUsers .container .boxHeaderManageUser .searchandupload .boxsearch form {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.bodyManageUsers .container .boxHeaderManageUser .searchandupload .boxsearch form .searchbar {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  font-size: 1.2em;
+  padding-left: 10px;
+  padding-right: 25px;
+  border: 2px solid rgb(140, 131, 131);
+}
+.bodyManageUsers .container .boxHeaderManageUser .searchandupload .boxsearch form .btnsubmitSearch {
+  width: 40px;
+  height: 35px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+}
+.bodyManageUsers .container .boxHeaderManageUser .searchandupload .boxsearch form .btnsubmitSearch ion-icon {
+  font-size: 1.2em;
+}
+.bodyManageUsers .container .table-container {
+  max-height: 550px;
+  /* Đặt chiều cao tối đa cho bảng */
+  overflow-y: auto;
+  /* Cho phép cuộn dọc */
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+table thead {
+  position: sticky;
+  top: 0;
+  background-color: #f2f2f2;
+  z-index: 1;
+}
+table th,
+table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+.btn-watch-profile {
+  background-color: #ef39a0;
+}
+
+.btn-edit {
+  background-color: #2196f3;
+}
+
+.btn-delete {
+  background-color: #f44336;
+}
+
+.action-buttons {
+  text-align: right;
+  margin-top: 20px;
+}
+
+/*# sourceMappingURL=ManageUsers.css.map */

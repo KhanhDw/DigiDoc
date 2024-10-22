@@ -1,0 +1,18 @@
+.btnGotoDocSaved {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+
+  a {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(34, 47, 57);
+    color: rgb(255, 106, 106);
+  }
+
+  a:hover {
+    background-color: rgb(0, 0, 0);
+    color: rgb(254, 27, 27);
+  }
+}

@@ -1,0 +1,230 @@
+.containtbox-Cart {
+  margin: 20px 10rem;
+}
+.containtbox-Cart .notification {
+  z-index: 1000;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+.containtbox-Cart .notification.show {
+  display: block;
+  animation: slideIn 0.5s ease;
+}
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.containtbox-Cart .headerCart {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.containtbox-Cart .headerCart .titlebook {
+  width: 60%;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: row;
+}
+.containtbox-Cart .headerCart .titlebook ion-icon {
+  margin-right: 10px;
+  font-size: 26px;
+}
+.containtbox-Cart .headerCart .titlebook h1 {
+  margin-left: 10px;
+  font-size: 26px;
+  font-weight: 600;
+  padding: 0;
+  margin: 0;
+  font-family: "Lexend", sans-serif;
+}
+.containtbox-Cart .headerCart .titlebook p {
+  font-size: 16px;
+  font-weight: 200;
+  padding: 0;
+  margin: 0 0 0 20px;
+  font-family: "Lexend", sans-serif;
+}
+.containtbox-Cart .headerCart .search-box {
+  display: flex;
+  justify-content: center;
+}
+.containtbox-Cart .headerCart .search-box input {
+  width: 300px;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  font-size: 16px;
+}
+.containtbox-Cart .headerCart .search-box button {
+  padding: 5px 10px;
+  border: 2px solid #ddd;
+  background-color: #504848;
+  color: white;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+.containtbox-Cart .headerCart .search-box button ion-icon {
+  font-size: 30px;
+}
+.containtbox-Cart .headerCart .search-box button:hover {
+  background-color: #b4bec9;
+}
+.containtbox-Cart .ListItemCart .listDocument,
+.containtbox-Cart .ListItemCart .listDocumentSearch {
+  height: 580px;
+  width: auto;
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch {
+  font-size: 1.2em;
+  cursor: default;
+  padding: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument h5,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch h5,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument h5,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch h5 {
+  color: #4d3737;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument h5:hover,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch h5:hover,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument h5:hover,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch h5:hover {
+  color: #707cff;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument .dayAndPrice,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch .dayAndPrice,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument .dayAndPrice,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch .dayAndPrice {
+  display: flex;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument .dayAndPrice p,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch .dayAndPrice p,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument .dayAndPrice p,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch .dayAndPrice p {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0;
+  margin: 0 20px;
+  font-size: 0.9rem;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument .boxtool,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch .boxtool,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument .boxtool,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch .boxtool {
+  padding: 0;
+  margin: 0 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument .boxtool .btndel,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch .boxtool .btndel,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument .boxtool .btndel,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch .boxtool .btndel {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin-left: 8px;
+  border-radius: 20%;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument .boxtool .btndel ion-icon,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch .boxtool .btndel ion-icon,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument .boxtool .btndel ion-icon,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch .boxtool .btndel ion-icon {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument .boxtool .btndownload,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch .boxtool .btndownload,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument .boxtool .btndownload,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch .boxtool .btndownload {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 20%;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument .boxtool .btndownload ion-icon,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch .boxtool .btndownload ion-icon,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument .boxtool .btndownload ion-icon,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch .boxtool .btndownload ion-icon {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument .boxtool .btndel:hover,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch .boxtool .btndel:hover,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument .boxtool .btndel:hover,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch .boxtool .btndel:hover {
+  background-color: #ff5d5d;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument .boxtool .btndel:hover ion-icon,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch .boxtool .btndel:hover ion-icon,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument .boxtool .btndel:hover ion-icon,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch .boxtool .btndel:hover ion-icon {
+  color: rgb(0, 0, 0);
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument .boxtool .btndownload:hover,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch .boxtool .btndownload:hover,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument .boxtool .btndownload:hover,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch .boxtool .btndownload:hover {
+  background-color: #b3d4ff;
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument .boxtool .btndownload:hover i,
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocumentSearch .boxtool .btndownload:hover i,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument .boxtool .btndownload:hover i,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocumentSearch .boxtool .btndownload:hover i {
+  color: rgb(0, 0, 0);
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument:hover,
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument:hover {
+  background-color: rgb(243, 243, 230);
+}
+.containtbox-Cart .ListItemCart .listDocument .itemlistdocument:not(:last-child),
+.containtbox-Cart .ListItemCart .listDocumentSearch .itemlistdocument:not(:last-child) {
+  border-bottom: 2px solid rgb(184, 184, 184);
+}
+
+/*# sourceMappingURL=cart.css.map */

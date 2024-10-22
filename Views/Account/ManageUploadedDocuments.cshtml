@@ -1,0 +1,53 @@
+@{
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+    ViewData["Title"] = "Quản lý tài liệu";
+}
+
+@model List<Book>;
+
+
+<link rel="stylesheet" href="~/css/ManageUploadedDocuments.css" asp-append-version="true" />
+
+
+<div class="bodypersonalinformation">
+    <div class="boxbanner">
+        <div class="title">
+            <ion-icon name="document-text"></ion-icon>
+            <h1>Tài liệu đã tải lên</h1>
+        </div>
+        <div class="searchandupload">
+            <div class="boxsearch">
+                <form asp-action="ManageUploadedDocuments" method="get">
+                    <input type="text" class="searchbar" name="searchManageUploadedDocument">
+                    <button type="submit"><ion-icon name="search"></ion-icon></button>
+                </form>
+            </div>
+            <a href="/UploadDocument" class="btnUpload" style="color: black; cursor: pointer;"><ion-icon
+                    name="duplicate-outline"></ion-icon>
+                Tải
+                lên tài
+                liệu</a>
+        </div>
+    </div>
+    <div class="boxinfor">
+        <ul class="listDocument">
+            @foreach (var item in Model)
+            {
+                <li class="itemlistdocument">
+                    <a href="/detaildoc/@item.BookID">@item.Title</a>
+                    <p>Ngày đăng: @item.CreatedDate</p>
+                    <div class="boxtool">
+                        <a href="/UpdateDocument/Edit/@item.BookID" class="btnedit"><i
+                                class="fa-regular fa-pen-to-square"></i></a>
+                        <form asp-action="RemoveBookAccount" method="post" id="formDeleteBook">
+                            <input type="text" name="idBookDel" id="idBookDel" hidden value="@item.BookID">
+                            <a class="btndel" data-idBookRemove="@item.BookID"><ion-icon
+                                    name="trash-outline"></ion-icon></a>
+                        </form>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+<script src="~/js/ManageUploadedDocuments.js" asp-append-version="true"></script>

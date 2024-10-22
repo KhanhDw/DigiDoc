@@ -1,0 +1,85 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.brand-name {
+  font-size: 25px !important;
+  font-weight: 900 !important;
+}
+
+.boxheader {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Tiêu chuẩn */
+}
+.boxheader ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.boxheader ul li a ion-icon {
+  padding: 0;
+  margin: 0 5px;
+  font-size: 20px;
+}
+.boxheader .MarkForDownloadFile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(142, 142, 142, 0.192);
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+.boxheader .MarkForDownloadFile p {
+  padding: 0;
+  margin: 0 4px 0 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+.boxheader .MarkForDownloadFile ion-icon {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+.boxheader .box-avarta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: rgba(142, 142, 142, 0.192);
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.boxheader .box-avarta img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.boxheader .box-avarta h5 {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.boxheader .cartLogin {
+  margin: 0 40px;
+  padding: 5px 10px;
+  border-radius: 20%;
+}
+.boxheader .cartLogin:hover {
+  background-color: rgb(192, 225, 254);
+}
+
+/*# sourceMappingURL=header.css.map */

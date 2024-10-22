@@ -1,0 +1,204 @@
+﻿@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model LichSuNapvaHeThongNap
+
+
+<link rel="stylesheet" href="~/css/Coins.css">
+
+<div class="bodyCoins" id="bodyCoins">
+    <div class="container">
+        <div class="point-management">
+            <h2>QUẢN LÝ ĐIỂM</h2>
+            <p class="current-points">Số điểm hiện tại: <span id="currentPointsCoins"
+                    data_currentPointsCoins="@ViewBag.DiemTieuTaiFile">@ViewBag.DiemTieuTaiFile</span>
+            </p>
+            <h3>Lịch sử nạp</h3>
+
+            <div id="history">
+                @* Lịch sử nạp điểm của người dùng *@
+
+                @if (Model.ListLichSuNapDiem != null && Model.ListLichSuNapDiem.Count > 0)
+                {
+                    <table class="table table-bordered" style="font-size: 15px; text-align: center;">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">Ngày</th>
+                                <th style="width: 25%;">Trạng thái</th>
+                                <th style="width: 25%;">Điểm nạp</th>
+                                <th style="width: 25%;">Số tiền nạp (VND)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.ListLichSuNapDiem)
+                            {
+                                <tr>
+                                    <td>@item.CreatedDate</td>
+                                    <td>@item.TrangThai</td>
+                                    <td><span class="tien_lichSuNap">@item.DiemNap</span> điểm</td>
+                                    <td><span class="tien_lichSuNap">@item.SotienNap</span> VND</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                }
+            </div>
+
+            @* Lịch sử nạp điểm của người dùng *@
+            @* <div id="history">
+            @if (Model.ListLichSuNapDiem != null && Model.ListLichSuNapDiem.Count > 0)
+            {
+            @foreach (var item in Model.ListLichSuNapDiem)
+            {
+            <div class="history-item">
+            <span>@item.CreatedDate</span>
+            <span>@item.TrangThai</span>
+            <span><span class="tien_lichSuNap">@item.DiemNap</span> điểm</span>
+            <span>
+            <span><span class="tien_lichSuNap">@item.SotienNap</span> VND</span>
+            <span class="status-indicator"></span>
+            </span>
+            </div>
+            }
+            }
+            </div> *@
+
+
+        </div>
+        <div class="point-packages">
+            <div class="headerBoxNapDiem">
+                <h2>Chọn gói nạp điểm</h2>
+                <a id="ShowSystemRecharge">Điều chỉnh gói điểm</a>
+            </div>
+
+
+
+            <div id="packages">
+                @if (Model.ListHeThongDiemNap != null && Model.ListHeThongDiemNap.Count > 0)
+                {
+                    @foreach (var item in Model.ListHeThongDiemNap)
+                    {
+                        <div class="package-item">
+                            <span><span class="SoDiemNap">@item.SoDiem</span> Điểm</span>
+                            <span><span class="SotienCanNap">@item.SoTien</span> VND</span>
+                        </div>
+                    }
+                }
+
+            </div>
+            <div class="LuuY">
+                <p>Lưu ý:</p>
+                <p>1. Điểm sẽ được cộng vào tài khoản ngay sau khi nạp thành công.</p>
+                <p>2. Điểm không có giá trị quy đổi thành tiền mặt.</p>
+                <div class="boxYeuCauXacNhanNap" hidden>
+                    <p>3. Nếu sau 10 phút mà điểm chưa được cộng vui lòng nhấp <ion-icon
+                            name="arrow-forward-outline"></ion-icon></p>
+                    <a href="#" class="btnYeuCauXacNhanNap">Yêu câu xác nhận nạp</a>
+                </div>
+
+            </div>
+            <button class="select-package" id="btn-select-package">Chọn gói điểm muốn nạp</button>
+        </div>
+    </div>
+    <div class="ContaintOverPlayDieuChinhDiem" id="ContaintOverPlayDieuChinhDiem" hidden>
+        <div class="OverPlayDieuChinhDiem" id="OverPlayDieuChinhDiem">
+            <div class="headerTitleOverPlayDieuChinhDiem">
+                <h1 class="title">Hệ thống điểm nạp</h1>
+                <a class="CloseOverPlay" id="CloseOverPlay">
+                    <ion-icon name="close-outline"></ion-icon>
+                </a>
+            </div>
+            <div class="content">
+                <div class="points-list">
+                    <h2>Điểm và giá đã nhập</h2>
+                    <ul id="pointsList">
+                        @if (Model.ListHeThongDiemNap != null && Model.ListHeThongDiemNap.Count > 0)
+                        {
+                            @foreach (var item in Model.ListHeThongDiemNap)
+                            {
+                                <li class="flex justify-between items-center bg-gray-100 p-2 rounded server">
+                                    <span><span class="SoDiemNap">@item.SoDiem</span> Điểm - <span
+                                            class="SotienCanNap">@item.SoTien</span> VND - <span>Đã Lưu</span> </span>
+                                    <a class="RemoveMucNap" id="RemoveMucNap" data-DiemNapID="@item.DiemNapID">Xóa</a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                    <a id="CapNhatDataVaoHeThong">Xác nhận Cập nhật dữ liệu vào hệ thống</a>
+                </div>
+                <div class="form-section">
+                    <form id="rechargeForm">
+                        <div class="form-group">
+                            <label for="SoDiem">Nhập Điểm</label>
+                            <input type="text" id="SoDiem" name="SoDiem" required placeholder="Nhập số điểm"
+                                oninput="formatNumberInput(this)" onkeypress="return isNumberKey(event)">
+                        </div>
+                        <div class="form-group">
+                            <label for="SoTien">Nhập Giá Tiền</label>
+                            <input type="text" id="SoTien" name="SoTien" required placeholder="Nhập giá tiền"
+                                oninput="formatNumberInput(this)" onkeypress="return isNumberKey(event)">
+                        </div>
+                        <button type="submit">Thêm mục nạp</button>
+                    </form>
+                    <div id="result" class="result hidden" hidden>
+                        <p>Bạn đã nhập:</p>
+                        <p id="selectedPoints"></p>
+                        <p id="selectedPrice"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="boxCard" hidden>
+        <div class="card">
+            <div class="content">
+                <div class="info">
+                    <h2>Thông tin chuyển khoản</h2>
+                    <div class="field">
+                        <div class="label">Số tài khoản người nhận</div>
+                        <div class="value">1234567890</div>
+                    </div>
+                    <div class="field">
+                        <div class="label">Tên ngân hàng người nhận</div>
+                        <div class="value">Ngân hàng TMCP Á Châu (ACB)</div>
+                    </div>
+                    <div class="field">
+                        <div class="label">Số tiền phải chuyển</div>
+                        <div class="value">1,000,000 VND</div>
+                    </div>
+                    <div class="field">
+                        <div class="label">Nội dung chuyển khoản</div>
+                        <div class="value">@Model.UserId<span>/</span><span
+                                id="ThongTinSoTienNap"></span>/@ViewBag.UserName</div>
+                    </div>
+                </div>
+                <div class="qr-code">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <rect x="7" y="7" width="3" height="3"></rect>
+                        <rect x="14" y="7" width="3" height="3"></rect>
+                        <rect x="7" y="14" width="3" height="3"></rect>
+                        <rect x="14" y="14" width="3" height="3"></rect>
+                    </svg>
+                    <p style="margin-top: 16px; font-size: 14px; color: #666; text-align: center;">Quét mã QR để chuyển
+                        khoản</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="btn-secondary" onclick="handleCancel()">Hủy</button>
+                <button id="btnXacNhanChuyenKhoanNapDiem" class="btn-primary" data_UserId="@ViewBag.UserId"
+                    data_UserName="@ViewBag.UserName">Xác nhận
+                    chuyển
+                    khoản</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="~/js/Coins.js" asp-append-version="true"></script>

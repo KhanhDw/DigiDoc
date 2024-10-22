@@ -1,0 +1,99 @@
+@{
+    ViewData["Title"] = "Tìm kiếm sách";
+}
+@using Microsoft.AspNetCore.Http
+@model SearchViewModel
+
+
+<link rel="stylesheet" href="~/css/Search.css" asp-append-version="true" />
+
+<div class="container box-docmarket">
+    <div class="boxcategory">
+        <div class="category">
+            <div class="danhmuctitle">
+                <i class="fa-solid fa-bars fa-lg"></i>
+                <h2>DANH MỤC</h2>
+            </div>
+            <ul class="listCategory">
+                <li><a href="/CategoryBook/"><i class="bi bi-caret-right"></i> Tất cả</a></li>
+                <li><a href="/CategoryBook/ban-hang-va-kinh-doanh"><i class="bi bi-caret-right"></i> Bán hàng & Kinh
+                        doanh</a></li>
+                <li><a href="/CategoryBook/phat-trien-ban-than"><i class="bi bi-caret-right"></i> Phát triển bản
+                        thân</a>
+                </li>
+                <li><a href="/CategoryBook/IT-va-lap-trinh"><i class="bi bi-caret-right"></i> IT và lập trình</a></li>
+                <li><a href="/CategoryBook/ke-toan-thue-tai-chinh"><i class="bi bi-caret-right"></i> Kế toán, Thuế & Tài
+                        chính</a></li>
+                <li><a href="/CategoryBook/kien-truc-va-xay-dung"><i class="bi bi-caret-right"></i> Kiến trúc và xây
+                        dựng</a></li>
+                <li><a href="/CategoryBook/luat-phap-ly"><i class="bi bi-caret-right"></i> Luật & Pháp lý</a></li>
+                <li><a href="/CategoryBook/Marketing-truyen-thong"><i class="bi bi-caret-right"></i> Marketing & Truyền
+                        thông</a>
+                </li>
+                <li><a href="/CategoryBook/thiet-ke"><i class="bi bi-caret-right"></i> Thiết kế</a></li>
+                <li><a href="/CategoryBook/khac"><i class="bi bi-caret-right"></i> Khác</a></li>
+            </ul>
+        </div>
+        <div class="category">
+            <div class="danhmuctitle">
+                <i class="fa-solid fa-bars fa-lg"></i>
+                <h2>Loại tài liệu</h2>
+            </div>
+            <ul class="listCategory">
+                <li><a href="#"><i class="bi bi-caret-right"></i> Miễn phí</a></li>
+                <li><a href="#"><i class="bi bi-caret-right"></i> Trả phí</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="moicapnhat">
+        <div class="boxtitlexemnhieu">
+            <div class="titlebook">
+                <ion-icon name="search-circle-outline"></ion-icon>
+                <h1>@Model.SearchTerm</h1>
+            </div>
+            <form asp-controller="/Search" asp-action="Index" method="get">
+                <div class="search-box">
+                    <input type="text" name="SearchName" placeholder="Nhập nội dung cần tìm...">
+                    <button type="submit"><ion-icon name="search"></ion-icon></button>
+                </div>
+            </form>
+        </div>
+        <ul class="listmoicapnhat ">
+
+
+            @if (Model != null && Model.ResultsBook != null)
+            {
+                @foreach (var book in Model.ResultsBook)
+                {
+                    <li class="itemmoicapnhat">
+                        <a href="/detaildoc/@book.BookID">
+                            <div class="imgDaiDien">
+                                <img src="~/storage/thumnail/@book.ImgThumbnail">
+                            </div>
+                            <div class="infoDoc">
+                                <h5>@book.Title</h5>
+                                <div class="page-day">
+                                    <p>Ngày đăng: @book.CreatedDate.ToString("dd-MM-yyyy")</p>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                }
+
+            }
+        </ul>
+        <br />
+
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
+
+</div>

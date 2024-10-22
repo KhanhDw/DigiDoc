@@ -1,0 +1,161 @@
+﻿@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<Blog>
+
+
+<link rel="stylesheet" href="~/css/Community.css" asp-append-version="true" />
+
+
+<div class="container">
+    <div class="content">
+        <div class="contentCenter">
+            <div class="TitleAndSearch">
+                <h2>Bài viết cộng đồng</h2>
+                <div class="search-container">
+                    <form asp-controller="Community" asp-action="SearchBlog" method="Post">
+                        <input type="text" name="BlogName" placeholder="Tìm tên bài blog..." class="search-input">
+                        <button type="submit" class="search-button">Tìm kiếm</button>
+                    </form>
+                </div>
+            </div>
+            <section class="blog-review" id="blog-review">
+                @if (Model != null)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <article class="blog-post" data-post-id="@item.BlogID">
+                            <a class="item-blog-post" href="#" data-numberOfView="@item.BlogViews"
+                                data-post-id="@item.BlogID"></a>
+                            <div class="header-blog-post">
+                                <h3>@item.BlogName</h3>
+                                <p><a hidden href="#"><ion-icon name="bookmark-outline"></ion-icon></a><ion-icon
+                                        name="eye"></ion-icon>
+                                    @item.BlogViews
+                                    |
+                                    @item.CreatedDate.ToString("dd-MM-yyyy")</p>
+                            </div>
+                        </article>
+                    }
+                }
+
+                @* <article class="blog-post" data-post-id="1">
+                <a class="item-blog-post" href="#"></a>
+                <div class="header-blog-post">
+                <h3>tên bài blog 1</h3>
+                <p><a href="#"><ion-icon name="link-outline"></ion-icon></a><ion-icon name="eye"></ion-icon>
+                10
+                -
+                22/07/2003</p>
+                </div>
+                </article> *@
+
+
+
+                @* Hiển thị bài viêt đã click *@
+                <article id="blog-post-show" class="blog-post-show" hidden>
+                    <div class="header-blog-post">
+                        <div class="boxLeftHeader">
+                            <a href="#" id="BtnBack"><ion-icon name="arrow-back-circle-outline"></ion-icon></a>
+                            <h3 id="NameBlog">tên bài blog</h3>
+                        </div>
+                        <p>
+                            <a href="#" hidden>
+                                <ion-icon name="bookmark-outline"></ion-icon>
+                            </a>
+                            <a href="#">
+                                <ion-icon name="link-outline"></ion-icon>
+                            </a>
+                        </p>
+                        <div
+                            style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                                <ion-icon name="eye"></ion-icon>
+                                <p style="margin-left: 10px;" id="NumberOfView">10</p>
+                            </div>
+                            <span id="dateCreateBlog">22/07/2003</span>
+                        </div>
+                    </div>
+                    <div class="blog-content" id="blog-content">
+                        <p class="blog-content-Center" id="blog-content-Center">
+                            nội dung này sẽ bị thay thế bởi data server
+                        </p>
+                    </div>
+                </article>
+
+                @*----------------- Đăng bài viết mới -----------------*@
+                <article id="article_FormPostBlog" class="article_FormPostBlog" hidden>
+                    <div class="form-container">
+                        <form method="post" asp-action="Index">
+                            <div class="form-group">
+                                <label for="titleBlog">Nhập tiêu đề cho bài viết</label>
+                                <input type="text" id="title" name="titleBlog" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contentBlog">Nội dung bài viết</label>
+                                <textarea id="content" name="contentBlog" required></textarea>
+                            </div>
+                            <div class="BtnBackAndPost">
+                                <a href="#" id="btnBackViewPost">Hủy</a>
+                                <button type="submit">Đăng bài</button>
+                            </div>
+                        </form>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+        <aside class="sidebar">
+            <section class="Box_Post_Blog">
+                <div class="BoxbtnPostBlog">
+                    <a href="/home" id="btnPostBlog">
+                        <ion-icon name="add-circle"></ion-icon>Đăng bài viết
+                    </a>
+                </div>
+                <div class="BoxNotifications">
+                    <a href="/home" class="btnSetting"><ion-icon name="notifications"></ion-icon>+999</a>
+                </div>
+                <div class="Boxsetting">
+                    <a href="/home" class="btnSetting"><ion-icon name="settings"></ion-icon></a>
+                </div>
+            </section>
+            <section class="latest-comments">
+                <h2>Lịch sử xem</h2>
+                <ul>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                    <li><a href="#">xin chào</a></li>
+                </ul>
+            </section>
+            <section class="support">
+                <h2>Ủng hộ page</h2>
+                <div class="content">
+                    <div class="info">
+                        <p>Những đóng góp của bạn là kinh phí để web được duy trì hoạt động</p>
+                        <p class="thank-you">Xin chân thành cảm ơn</p>
+                    </div>
+                    <img class="QR_donate" src="~/img/QR_donate.jpg">
+                </div>
+            </section>
+        </aside>
+    </div>
+</div>
+
+<script src="~/js/Community.js" asp-append-version="true"></script>

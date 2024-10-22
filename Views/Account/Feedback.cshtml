@@ -1,0 +1,19 @@
+@{
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+    ViewData["Title"] = "Quản lý tài liệu";
+}
+<link rel="stylesheet" href="~/css/Feedback.css" asp-append-version="true" />
+
+
+<div class="bodypersonalinformation">
+    <div class="boxbanner">
+        <div class="title">
+            <ion-icon name="document-text"></ion-icon>
+            <h1>Góp ý chức năng</h1>
+        </div>
+    </div>
+    <div class="boxinfor">
+        <textarea name="feedback" id="feedback" class="feedbackarea"></textarea>
+        <button class="btnsendfeedback">Gửi Feedback</button>
+    </div>
+</div>

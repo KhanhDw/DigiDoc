@@ -1,0 +1,23 @@
+@{
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+    ViewData["Title"] = "Quản lý tài liệu";
+}
+
+@model List<Blog>
+
+<link rel="stylesheet" href="~/css/BaiVietDaDang.css" asp-append-version="true" />
+
+
+<div class="bodypersonalinformation">
+    <div class="boxbanner">
+        <div class="title">
+            <ion-icon name="document-text"></ion-icon>
+            <h1>Bài viết đã Đăng</h1>
+        </div>
+    </div>
+    <div class="boxinfor">
+
+        @RenderBody()
+    </div>
+</div>
+@* <script src="~/js/BaiVietDaDang.js" asp-append-version="true"></script> *@

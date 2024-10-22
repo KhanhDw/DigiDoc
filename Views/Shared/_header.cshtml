@@ -1,0 +1,117 @@
+﻿@{
+    var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+    var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+    var currentUrl = Context.Request.Path.Value;
+    bool isHomePage = string.IsNullOrEmpty(currentUrl) || currentUrl == "/" || currentUrl.ToLower() == "/home" ||
+    currentUrl.ToLower() == "/Login" || currentUrl.ToLower() == "/Register";
+
+}
+
+<link rel="stylesheet" href="~/css/header.css" asp-append-version="true" />
+
+<header class="headerNav">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow ">
+
+        <div class="container-fluid">
+
+            <a class="navbar-brand brand-name" asp-area="" asp-controller="Home" asp-action="Index">DigiDoc</a>
+
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between boxheader">
+                <ul class="navbar-nav flex-grow-1 justify-content-center">
+                    <li class="nav-item me-md-3">
+                        <a class="nav-link @(currentController == "DocMarket" && currentAction == "Index" ? "active" : "")"
+                            asp-area="" asp-controller="DocMarket" asp-action="Index"><ion-icon
+                                name="home-outline"></ion-icon> TÀI LIỆU</a>
+                    </li>
+                    <li class="nav-item me-md-3">
+                        <a class="nav-link @(currentController == "CategoryBook" && currentAction == "Index" ? "active" : "")"
+                            asp-area="" asp-controller="CategoryBook" asp-action="Index"><ion-icon
+                                name="file-tray-stacked-outline"></ion-icon> THỂ LOẠI</a>
+                    </li>
+                    <li class="nav-item me-md-3">
+                        <a class="nav-link @(currentController == "Community" && currentAction == "Index" ? "active" : "")"
+                            asp-area="" asp-controller="Community" asp-action="Index"><ion-icon
+                                name="people-outline"></ion-icon> CỘNG ĐỒNG</a>
+                    </li>
+                </ul>
+
+                @if (User.Identity != null && User.Identity.IsAuthenticated && (User.IsInRole("2") ||
+                User.IsInRole("3")))
+
+                {
+                    <ul class="navbar-nav flex-grow-1 justify-content-center">
+                        <li class="nav-item me-md-3">
+                            <a class="nav-link @(currentController == "ManageUsers" && currentAction == "Index" ? "active" : "")"
+                                asp-area="" asp-controller="ManageUsers" asp-action="Index"><i
+                                    class="bi bi-database"></i>Người dùng</a>
+                        </li>
+                        <li class="nav-item me-md-3">
+                            <a class="nav-link @(currentController == "DocumentsManage" && currentAction == "Index" ? "active" : "")"
+                                asp-area="" asp-controller="DocumentsManage" asp-action="Index"><i
+                                    class="bi bi-database"></i>Tài liệu</a>
+                        </li>
+                        <li class="nav-item me-md-3">
+                            <a class="nav-link @(currentController == "BillManage" && currentAction == "Index" ? "active" : "")"
+                                asp-area="" asp-controller="BillManage" asp-action="Index"><i class="bi bi-database"></i>
+                                Doanh thu</a>
+                        </li>
+
+                    </ul>
+                }
+                else
+                {
+
+                }
+                @if (!isHomePage)
+                {
+                    <a class="MarkForDownloadFile" href="/Coins">
+                        <p>Điểm:</p>
+                        <p id="DiemTieuDungHeader">@ViewBag.DiemTieuTaiFile</p>
+                        <ion-icon name="add-circle-outline">
+                    </a>
+                }
+
+                @if (User.Identity != null && User.Identity.IsAuthenticated)
+                {
+                    <a class="cartLogin nav-link @(currentController == "Cart" && currentAction == "Index" ? "active" : "")"
+                        asp-area="" asp-controller="Cart" asp-action="Index"><ion-icon name="cart-outline" size="large"
+                            class="Icon-cart-header cart-hover"></ion-icon></a>
+
+                    <a class="box-avarta" href="/account">
+                        <img src="~/img/hinhtam.png" alt="">
+                        <h5>@ViewBag.UserName</h5>
+                    </a>
+                }
+                else
+                {
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link @(currentController == "Login" && currentAction == "Index" ? "active" : "")"
+                                asp-area="" asp-controller="Login" asp-action="Index">Đăng Nhập</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">||</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(currentController == "Register" && currentAction == "Index" ? "active" : "")"
+                                asp-area="" asp-controller="Register" asp-action="Index">Đăng Ký</a>
+                        </li>
+                    </ul>
+                }
+            </div>
+        </div>
+    </nav>
+</header>
+
+@* chợ sách free or fee
+Khóa học
+cộng đồng = diễn đàn trao đổi
+Giỏ hàng - sách và khóa học đã thêm vào giỏ hàng
+Đăng nhập | Đăng ký
+
+Quản lý bán hàng = cho người đăng ký làm người bán hàng
+Doanh số bán: Số lượng
+Doanh thu:
+Đã rút:
+Người đến xem: Số lượng *@
+<script src="~/js/header.js" asp-append-version="true"></script>

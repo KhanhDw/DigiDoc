@@ -1,0 +1,87 @@
+﻿@*
+For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<link rel="stylesheet" href="~/css/cart.css" asp-append-version="true" />
+
+@model IEnumerable<WebApplication1.Models.Book>
+
+@* @model WebApplication1.Models.CartBookSearchViewModel *@
+
+@* <h1 class="btnGotoDocSaved"><a href="/account/SavedDocument">Xem Tài Liệu Đã Lưu</a></h1> *@
+
+
+<div class="containtbox-Cart ">
+    <div id="notification" class="notification"><span>Điểm của bạn không đủ để tải tài liệu
+            này!!</span><br><span>vui lòng nạp thêm
+            điểm</span></div>
+    <div class="headerCart">
+        <div class="titlebook">
+            <ion-icon name="apps-sharp"></ion-icon>
+            <h1>Tài liệu đã lưu</h1>
+            <p class="titleSearch" hidden> tên sách tại đây </p>
+        </div>
+        <form id="searchForm" asp-controller="Cart" asp-action="Index" method="get">
+            <div class="search-box">
+                <input id='inputSearch' type="text" name="SearchName" placeholder="Nhập nội dung cần tìm...">
+                <button id="btnsubmitSearch" type="submit"><ion-icon name="search"></ion-icon></button>
+            </div>
+        </form>
+    </div>
+    <div class="ListItemCart">
+
+
+        <ul class="listDocumentSearch" hidden>
+            <li class="itemlistdocumentSearch">
+                <h5>name book</h5>
+                <div class="dayAndPrice">
+                    <p>Ngày đăng: </p>
+                    <p>Giá: </p>
+                </div>
+                <div class="boxtool">
+                    <a href="#" class="btnedit"><ion-icon name="download-outline"></ion-icon></a>
+                    <a href="#" class="btndel">
+                        <ion-icon name="trash-outline"></ion-icon>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <ul class="listDocument">
+            @if (Model != null)
+            {
+                @foreach (var book in Model)
+                {
+                    <li class="itemlistdocument">
+                        <a href="/detaildoc/@book.BookID">
+                            <h5>@book.Title</h5>
+                        </a>
+                        <div class="dayAndPrice">
+                            <p>Ngày đăng: @book.CreatedDate.ToShortDateString()</p>
+                            <p>Giá: <span class="GiaTienTaiLieu">@book.Price</span> đ</p>
+                        </div>
+                        <div class="boxtool">
+                            @if (ViewBag.DiemTieuTaiFile >= book.Price)
+                            {
+                                <a href="/DetailDoc/download/@book.BookID" class="btndownload"><ion-icon
+                                        name="download-outline"></ion-icon></a>
+                            }
+                            else
+                            {
+                                <a class="btndownload"><ion-icon name="download-outline"
+                                        onclick="showNotification()"></ion-icon></a>
+                            }
+                            <a href="#" class="btndel" data-bookid="@book.BookID" data-userid="@ViewBag.Userid">
+                                <ion-icon name="trash-outline" class="trashIcon"></ion-icon>
+                            </a>
+                        </div>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
+</div>
+
+
+<script src="~/js/cart.js" asp-append-version="true"></script>

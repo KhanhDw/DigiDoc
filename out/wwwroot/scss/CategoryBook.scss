@@ -1,0 +1,255 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&family=Lexend:wght@100..900&family=Signika+Negative:wght@300..700&display=swap");
+
+.box-docmarket {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+
+    .boxcategory {
+        margin-right: 8px;
+        width: 20%;
+
+        .category {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            flex-direction: column;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 100%;
+
+            .danhmuctitle {
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                padding-left: 15px;
+                width: 100%;
+
+                i {
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                }
+                h2 {
+                    margin: 0 10px;
+                    font-size: 17px;
+                    font-weight: bolder;
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    text-transform: uppercase;
+                }
+            }
+
+            .listCategory {
+                list-style-type: none;
+                padding: 0;
+                padding-left: 10px;
+                width: 100%;
+                display: flex;
+                justify-content: left;
+                flex-direction: column;
+                li {
+                    display: flex;
+                    justify-content: left;
+                    a {
+                        color: black;
+                        font-size: 17px;
+                        //  border: 1px solid black;
+                        flex: 1;
+                    }
+
+                    i {
+                        padding: 0;
+                        margin: 0;
+                        width: 100%;
+                    }
+                }
+
+                li:hover {
+                    a {
+                        color: rgb(40, 109, 228);
+                        font-size: 17px;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .moicapnhat {
+        width: 80%;
+        height: 100%;
+        //border: 1px solid black;
+
+        .boxtitlexemnhieu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px 0 10px 0;
+            width: 100%;
+            // border: 1px solid black;
+            .titlebook {
+                width: 60%;
+                display: flex;
+                justify-content: left;
+                align-items: center;
+                // border: 1px solid black;
+                ion-icon {
+                    margin-right: 10px;
+                    font-size: 26px;
+                }
+                h1 {
+                    margin-left: 10px;
+                    font-size: 26px;
+                    font-weight: 600;
+                    padding: 0;
+                    margin: 0;
+                    font-family: "Lexend", sans-serif;
+                    width: 100%;
+                }
+            }
+
+            .search-box {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                width: 40%;
+                margin: 10px 0;
+                // border: 1px solid black;
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    border: 2px solid #ddd;
+                    border-radius: 5px 0 0 5px;
+                    outline: none;
+                    font-size: 16px;
+                }
+
+                button {
+                    padding: 5px 10px;
+                    border: 2px solid #ddd;
+                    background-color: #000000;
+                    color: white;
+                    border-radius: 0 5px 5px 0;
+                    cursor: pointer;
+                    font-size: 16px;
+
+                    ion-icon {
+                        font-size: 30px;
+                    }
+                }
+                button:hover {
+                    background-color: #b4bec9;
+                }
+            }
+        }
+
+        .listmoicapnhat {
+            display: flex;
+            flex-wrap: wrap;
+            transition: transform 0.5s ease-in-out;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            .itemmoicapnhat {
+                display: flex;
+                flex-direction: column;
+                border-radius: 8px;
+                //border: 1px solid black;
+                box-sizing: border-box;
+                width: 20%;
+                padding: 5px;
+
+                a {
+                    color: black;
+
+                    .imgDaiDien {
+                        img {
+                            width: 100%;
+                            height: 100%px;
+                            border-top-left-radius: 8px;
+                            border-top-right-radius: 8px;
+                            // border: 1px solid black;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .infoDoc {
+                        padding: 5px;
+                        width: 100%; // repsonsive
+                        height: 90px;
+                        background-color: #ebebeb;
+                        border-bottom-left-radius: 8px;
+                        border-bottom-right-radius: 8px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: left;
+                        flex-direction: column;
+                        overflow-x: auto; /* Cho phép cuộn ngang */
+                        white-space: wrap; /* Ngăn các mục li xuống dòng */
+
+                        h5 {
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            line-height: 1.3; /* Adjust line height as needed */
+                            max-height: 4em; /* Adjust according to your line height */
+                        }
+
+                        .page-day {
+                            display: flex;
+                            align-items: left;
+                            flex-direction: column;
+
+                            p {
+                                margin: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .itemxemnhieu:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            margin-top: 20px;
+
+            a {
+                color: black;
+                float: left;
+                padding: 8px 16px;
+                text-decoration: none;
+                border: 1px solid #ddd;
+                margin: 0 4px;
+                transition: background-color 0.3s;
+            }
+
+            a.active {
+                background-color: #4caf50;
+                color: white;
+                border: 1px solid #4caf50;
+            }
+
+            a:hover:not(.active) {
+                background-color: #ddd;
+            }
+        }
+    }
+}

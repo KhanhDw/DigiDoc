@@ -1,0 +1,917 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\404.css",
+      "PackagePath": "staticwebassets\\css\\404.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\BaiVietDaDang.css",
+      "PackagePath": "staticwebassets\\css\\BaiVietDaDang.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\BaiVietDaDang.css.map",
+      "PackagePath": "staticwebassets\\css\\BaiVietDaDang.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\CategoryBook.css",
+      "PackagePath": "staticwebassets\\css\\CategoryBook.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\CategoryBook.css.map",
+      "PackagePath": "staticwebassets\\css\\CategoryBook.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\ChinhSuaBaiViet.css",
+      "PackagePath": "staticwebassets\\css\\ChinhSuaBaiViet.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\ChinhSuaBaiViet.css.map",
+      "PackagePath": "staticwebassets\\css\\ChinhSuaBaiViet.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\Coins.css",
+      "PackagePath": "staticwebassets\\css\\Coins.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\Coins.css.map",
+      "PackagePath": "staticwebassets\\css\\Coins.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\Community.css",
+      "PackagePath": "staticwebassets\\css\\Community.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\Community.css.map",
+      "PackagePath": "staticwebassets\\css\\Community.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\Courses.css.map",
+      "PackagePath": "staticwebassets\\css\\Courses.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\DocumentsManage.css",
+      "PackagePath": "staticwebassets\\css\\DocumentsManage.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\DocumentsManage.css.map",
+      "PackagePath": "staticwebassets\\css\\DocumentsManage.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\Feedback.css",
+      "PackagePath": "staticwebassets\\css\\Feedback.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\Feedback.css.map",
+      "PackagePath": "staticwebassets\\css\\Feedback.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\Knowledge.css.map",
+      "PackagePath": "staticwebassets\\css\\Knowledge.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\ManageUploadedDocuments copy.css.map",
+      "PackagePath": "staticwebassets\\css\\ManageUploadedDocuments copy.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\ManageUploadedDocuments.css",
+      "PackagePath": "staticwebassets\\css\\ManageUploadedDocuments.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\ManageUploadedDocuments.css.map",
+      "PackagePath": "staticwebassets\\css\\ManageUploadedDocuments.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\ManageUsers.css",
+      "PackagePath": "staticwebassets\\css\\ManageUsers.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\ManageUsers.css.map",
+      "PackagePath": "staticwebassets\\css\\ManageUsers.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\PersonalInformation.css",
+      "PackagePath": "staticwebassets\\css\\PersonalInformation.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\PersonalInformation.css.map",
+      "PackagePath": "staticwebassets\\css\\PersonalInformation.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\SavedDocument copy.css.map",
+      "PackagePath": "staticwebassets\\css\\SavedDocument copy.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\SavedDocument.css",
+      "PackagePath": "staticwebassets\\css\\SavedDocument.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\SavedDocument.css.map",
+      "PackagePath": "staticwebassets\\css\\SavedDocument.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\Search.css",
+      "PackagePath": "staticwebassets\\css\\Search.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\Search.css.map",
+      "PackagePath": "staticwebassets\\css\\Search.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\account.css",
+      "PackagePath": "staticwebassets\\css\\account.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\account.css.map",
+      "PackagePath": "staticwebassets\\css\\account.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\cart.css",
+      "PackagePath": "staticwebassets\\css\\cart.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\cart.css.map",
+      "PackagePath": "staticwebassets\\css\\cart.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\docdetail.css",
+      "PackagePath": "staticwebassets\\css\\docdetail.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\docdetail.css.map",
+      "PackagePath": "staticwebassets\\css\\docdetail.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\docmarket.css",
+      "PackagePath": "staticwebassets\\css\\docmarket.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\docmarket.css.map",
+      "PackagePath": "staticwebassets\\css\\docmarket.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\footer.css",
+      "PackagePath": "staticwebassets\\css\\footer.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\footer.css.map",
+      "PackagePath": "staticwebassets\\css\\footer.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\header.css",
+      "PackagePath": "staticwebassets\\css\\header.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\header.css.map",
+      "PackagePath": "staticwebassets\\css\\header.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\home.css",
+      "PackagePath": "staticwebassets\\css\\home.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\home.css.map",
+      "PackagePath": "staticwebassets\\css\\home.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\layoutcss.css",
+      "PackagePath": "staticwebassets\\css\\layoutcss.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\sigin.css",
+      "PackagePath": "staticwebassets\\css\\sigin.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\signin.css",
+      "PackagePath": "staticwebassets\\css\\signin.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\signin.css.map",
+      "PackagePath": "staticwebassets\\css\\signin.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\AnhBiaMacDinh.png",
+      "PackagePath": "staticwebassets\\img\\AnhBiaMacDinh.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\AnhDaiDienMacDinh.png",
+      "PackagePath": "staticwebassets\\img\\AnhDaiDienMacDinh.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\QR_donate.jpg",
+      "PackagePath": "staticwebassets\\img\\QR_donate.jpg"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\anhtam.png",
+      "PackagePath": "staticwebassets\\img\\anhtam.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\atm_card.png",
+      "PackagePath": "staticwebassets\\img\\atm_card.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\banner.jpg",
+      "PackagePath": "staticwebassets\\img\\banner.jpg"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\banner1-fotor.png",
+      "PackagePath": "staticwebassets\\img\\banner1-fotor.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\banner1.png",
+      "PackagePath": "staticwebassets\\img\\banner1.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\folders.png",
+      "PackagePath": "staticwebassets\\img\\folders.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\hinhtam.png",
+      "PackagePath": "staticwebassets\\img\\hinhtam.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\meeting.png",
+      "PackagePath": "staticwebassets\\img\\meeting.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\social-media.png",
+      "PackagePath": "staticwebassets\\img\\social-media.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\img\\trolley.png",
+      "PackagePath": "staticwebassets\\img\\trolley.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\404.js",
+      "PackagePath": "staticwebassets\\js\\404.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\BaiVietDaDang.js",
+      "PackagePath": "staticwebassets\\js\\BaiVietDaDang.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\BillManage.js",
+      "PackagePath": "staticwebassets\\js\\BillManage.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\CategoryBook.js",
+      "PackagePath": "staticwebassets\\js\\CategoryBook.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\ChinhSuaBaiViet.js",
+      "PackagePath": "staticwebassets\\js\\ChinhSuaBaiViet.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\Coins.js",
+      "PackagePath": "staticwebassets\\js\\Coins.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\Community.js",
+      "PackagePath": "staticwebassets\\js\\Community.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\DocBaiViet.js",
+      "PackagePath": "staticwebassets\\js\\DocBaiViet.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\DocumentsManage.js",
+      "PackagePath": "staticwebassets\\js\\DocumentsManage.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\ManageUploadedDocuments.js",
+      "PackagePath": "staticwebassets\\js\\ManageUploadedDocuments.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\ManageUsers.js",
+      "PackagePath": "staticwebassets\\js\\ManageUsers.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\PersonalInformation.js",
+      "PackagePath": "staticwebassets\\js\\PersonalInformation.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\UpdateDocument.js",
+      "PackagePath": "staticwebassets\\js\\UpdateDocument.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\UploadDocument.js",
+      "PackagePath": "staticwebassets\\js\\UploadDocument.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\cart.js",
+      "PackagePath": "staticwebassets\\js\\cart.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\detail.js",
+      "PackagePath": "staticwebassets\\js\\detail.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\docmarket.js",
+      "PackagePath": "staticwebassets\\js\\docmarket.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\header.js",
+      "PackagePath": "staticwebassets\\js\\header.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\signin.js",
+      "PackagePath": "staticwebassets\\js\\signin.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\signup.js",
+      "PackagePath": "staticwebassets\\js\\signup.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\BaiVietDaDang.scss",
+      "PackagePath": "staticwebassets\\scss\\BaiVietDaDang.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\CategoryBook.scss",
+      "PackagePath": "staticwebassets\\scss\\CategoryBook.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\ChinhSuaBaiViet.scss",
+      "PackagePath": "staticwebassets\\scss\\ChinhSuaBaiViet.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\Coins.scss",
+      "PackagePath": "staticwebassets\\scss\\Coins.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\Community.scss",
+      "PackagePath": "staticwebassets\\scss\\Community.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\DocumentsManage.scss",
+      "PackagePath": "staticwebassets\\scss\\DocumentsManage.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\Feedback.scss",
+      "PackagePath": "staticwebassets\\scss\\Feedback.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\ManageUploadedDocuments.scss",
+      "PackagePath": "staticwebassets\\scss\\ManageUploadedDocuments.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\ManageUsers.scss",
+      "PackagePath": "staticwebassets\\scss\\ManageUsers.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\PersonalInformation.scss",
+      "PackagePath": "staticwebassets\\scss\\PersonalInformation.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\SavedDocument.scss",
+      "PackagePath": "staticwebassets\\scss\\SavedDocument.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\Search.scss",
+      "PackagePath": "staticwebassets\\scss\\Search.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\account.scss",
+      "PackagePath": "staticwebassets\\scss\\account.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\cart.scss",
+      "PackagePath": "staticwebassets\\scss\\cart.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\docdetail.scss",
+      "PackagePath": "staticwebassets\\scss\\docdetail.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\docmarket.scss",
+      "PackagePath": "staticwebassets\\scss\\docmarket.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\footer.scss",
+      "PackagePath": "staticwebassets\\scss\\footer.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\header.scss",
+      "PackagePath": "staticwebassets\\scss\\header.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\home.scss",
+      "PackagePath": "staticwebassets\\scss\\home.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\scss\\signin.scss",
+      "PackagePath": "staticwebassets\\scss\\signin.scss"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\21102024225027doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\21102024225027doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\21102024233749doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\21102024233749doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024094720doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024094720doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024101031doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024101031doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024102234doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024102234doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024102920doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024102920doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024115413doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024115413doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024142327doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024142327doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024142449doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024142449doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024144720doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024144720doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024144824doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024144824doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024144845doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024144845doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165656doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165656doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165712doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165712doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165726doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165726doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165743doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165743doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165758doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165758doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165810doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165810doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165821doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165821doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165833doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165833doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165845doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165845doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165857doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165857doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165911doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165911doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165924doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165924doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024165949doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024165949doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024170001doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024170001doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024170033doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024170033doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\22102024170055doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\22102024170055doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\doc1.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\doc1.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\doc2.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\doc2.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\doc5.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\doc5.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\filedoc\\doc6.pdf",
+      "PackagePath": "staticwebassets\\storage\\filedoc\\doc6.pdf"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\11.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\11.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\21102024225027Untitled.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\21102024225027Untitled.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\21102024233749Untitled.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\21102024233749Untitled.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024094720111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024094720111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024101031111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024101031111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024102234111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024102234111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024102920hello.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024102920hello.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024115413111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024115413111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024142327111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024142327111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024142449Untitled.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024142449Untitled.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024144720111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024144720111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024144824111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024144824111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024144845111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024144845111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165656111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165656111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165712111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165712111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165726111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165726111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165743111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165743111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165758111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165758111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165810111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165810111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165821111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165821111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165833111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165833111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165845111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165845111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165857111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165857111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165911111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165911111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165924111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165924111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024165949111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024165949111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024170001111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024170001111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024170033111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024170033111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\22102024170055111.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\22102024170055111.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\Untitled.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\Untitled.png"
+    },
+    {
+      "Id": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\storage\\thumnail\\i1.png",
+      "PackagePath": "staticwebassets\\storage\\thumnail\\i1.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.WebApplication1.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.WebApplication1.props",
+      "PackagePath": "build\\WebApplication1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.WebApplication1.props",
+      "PackagePath": "buildMultiTargeting\\WebApplication1.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.WebApplication1.props",
+      "PackagePath": "buildTransitive\\WebApplication1.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

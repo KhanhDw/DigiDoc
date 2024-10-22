@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton+SC&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contain-home {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  padding: 15px 0;
+}
+.contain-home .boxbanner {
+  width: 100%;
+  height: 100%;
+  margin: 0 10px;
+  padding: 0 100px;
+}
+.contain-home .boxbanner h1 {
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.contain-home .boxbanner .btnkhampha {
+  width: 150px;
+  height: 70px;
+  background-color: #006989;
+  margin: 40px 0;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.contain-home .boxbanner .btnkhampha a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: bolder;
+  color: #f3f7ec;
+}
+.contain-home .boxbanner .btnkhampha:hover {
+  background-color: #16c79a;
+}
+.contain-home .contain-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.contain-home .contain-nav .btnbox {
+  background-color: #a1bbe5;
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+  border-radius: 10px;
+  transition: background-color 0.6s;
+}
+.contain-home .contain-nav .btnbox .btnnav {
+  padding: 10px;
+  width: 100%;
+  height: 200px;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contain-home .contain-nav .btnbox .btnnav .imgbtn {
+  width: 100px;
+}
+.contain-home .contain-nav .btnbox .btnnav h2 {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+.contain-home .contain-nav .btnbox:hover {
+  background-color: rgb(32, 7, 100);
+}
+.contain-home .btnnav :hover h2 {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+/*# sourceMappingURL=home.css.map */

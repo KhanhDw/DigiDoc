@@ -1,0 +1,88 @@
+@{
+    var indexSTT = 1;
+    var roleChange = ViewBag.RoleChange ?? 1; // Giá trị mặc định là 1
+}
+
+@model IEnumerable<WebApplication1.Models.User>
+
+<link rel="stylesheet" href="~/css/ManageUsers.css" asp-append-version="true" />
+
+<div class="bodyManageUsers">
+    <div class="container">
+        <div class="boxHeaderManageUser">
+            <h1>Quản lý Người dùng</h1>
+            <div class="2btnRoles" style="display: flex">
+                <form asp-action="Index" method="post">
+                    <input type="hidden" name="newRole" value="1" />
+                    <button type="submit" class="btn btn-primary">Người dùng</button>
+                </form>
+                <form asp-action="Index" method="post">
+                    <input type="hidden" name="newRole" value="2" />
+                    <button type="submit" class="btn btn-primary">Admin</button>
+                </form>
+            </div>
+            <div class="searchandupload">
+                <div class="boxsearch">
+                    <form asp-action="Index" method="get">
+                        <input type="text" class="searchbar" name="SearchUserNameOrEmail">
+                        <button type="submit" class="btn btn-primary btnsubmitSearch"><ion-icon
+                                name="search"></ion-icon></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Tên</th>
+                        <th>Email</th>
+                        <th>Vai trò</th>
+                        <th>Ngày đăng ký</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @* <tr>
+                    <td>1</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>nguyenvana@example.com</td>
+                    <td>Admin</td>
+                    <td>
+                    <button class="btn btn-edit">Sửa</button>
+                    <button class="btn btn-delete">Xóa</button>
+                    </td>
+                    </tr> *@
+
+
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td>@indexSTT</td>
+                            <td>@user.Username</td>
+                            <td>@user.Email</td>
+                            @if (@user.UserLevel == 1)
+                            {
+                                <td>Ngươi dùng</td>
+                            }
+                            else
+                            {
+                                <td>Admin</td>
+                            }
+                            <td>@user.CreatedDate</td>
+                            <td>
+                                <a href="/ProfileUser/@user.UserID" class="btn btn-watch-profile">Xem</a>
+                                <a href="/UpdateUserInfo/@user.UserID" class="btn btn-edit">Sửa</a>
+                                <a href="#" class="btn btn-delete" data-Userid="@user.UserID">Xóa</a>
+                            </td>
+                        </tr>
+                        indexSTT++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/ManageUsers.js" asp-append-version="true"></script>

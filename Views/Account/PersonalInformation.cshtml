@@ -1,0 +1,70 @@
+@{
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+    ViewData["Title"] = "thông tin";
+}
+
+
+
+<link rel="stylesheet" href="~/css/PersonalInformation.css" asp-append-version="true" />
+
+<div class="bodypersonalinformation">
+    <div class="boxbanner">
+        <ion-icon name="shield-checkmark-sharp"></ion-icon>
+        <h1>Thông tin cá nhân</h1>
+    </div>
+    <div class="boxinfor">
+        <div class="listinfor">
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4 userNameInfor">
+                <div class="inputUserName">
+                    <label class="form-label" for="idUserName">Tên người dùng</label>
+                    <input required name="username" type="text" id="idUserName" class="form-control inputform" disabled
+                        placeholder="Nhập tên người dùng" value="@ViewBag.UserName" />
+                </div>
+                <div class="boxinputsubmit mt-4 boxbtnEditUserName">
+                    <button data-mdb-button-init data-mdb-ripple-init id="btnEditUserName"
+                        class="btn btn-primary btn-block mb-4 btnupdateusernam">Cập
+                        nhật tên người dùng</button>
+                </div>
+            </div>
+            <!-- Email input -->
+            <div data-mdb-input-init class="form-outline mb-4">
+                <label class="form-label" for="form2Example2">Địa chỉ Email</label>
+                <input required name="email" type="email" id="idEmail" class="form-control inputform" disabled
+                    placeholder="Nhập địa chỉ email" value="@ViewBag.Email" />
+            </div>
+
+            <!-- Password input -->
+            <div data-mdb-input-init class="form-outline boxinputpassword">
+                <div class="boxchangepassword">
+                    <label class="form-label" for="inputpassword">Mật khẩu</label>
+                    <input required name="password" type="password" id="inputpassword" class="form-control inputform"
+                        disabled placeholder="Nhập mật khẩu cũ" />
+
+                    <label id="lbnewPassword" class="form-label" for="inputpasswordNew" hidden>Mật khẩu Mới</label>
+                    <input required name="password" type="password" id="inputpasswordNew" class="form-control inputform"
+                        placeholder="Nhập mật khẩu mới" hidden />
+                </div>
+
+                <div class="boxinputsubmit mt-4 boxbtnChangePassword">
+                    <button data-mdb-button-init data-mdb-ripple-init id="btnChangePassword"
+                        class="btn btn-primary btn-block mb-4 btnChangePassword">Thay đổi mật khẩu</button>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+
+        </div>
+
+        <div class="anhbia">
+            <img src="~/img/anhtam.png" alt="" />
+            <div class="editanhbia">
+                <ion-icon name="create-outline"></ion-icon>
+                <h5>Điều chỉnh ảnh bìa</h5>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="~/js/PersonalInformation.js" asp-append-version="true"></script>

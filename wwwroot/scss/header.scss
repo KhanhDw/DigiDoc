@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.brand-name {
+    font-size: 25px !important;
+    font-weight: 900 !important;
+}
+.boxheader {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Tiêu chuẩn */
+
+    ul {
+        li {
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+                ion-icon {
+                    padding: 0;
+                    margin: 0 5px;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .MarkForDownloadFile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: rgba(142, 142, 142, 0.192);
+        padding: 5px 10px;
+        border-radius: 4px;
+        p {
+            padding: 0;
+            margin: 0 4px 0 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        ion-icon {
+            padding: 0;
+            margin: 0;
+            font-size: 20px;
+        }
+    }
+
+    .box-avarta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: rgba(142, 142, 142, 0.192);
+        padding: 5px 10px;
+        border-radius: 10px;
+        cursor: pointer;
+
+        img {
+            width: 35px;
+            height: 35px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        h5 {
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    .cartLogin {
+        margin: 0 40px;
+        padding: 5px 10px;
+        border-radius: 20%;
+    }
+
+    .cartLogin:hover {
+        background-color: rgb(192, 225, 254);
+    }
+}

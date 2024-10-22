@@ -1,0 +1,311 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bodypersonalinformation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    .boxbanner {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        flex-direction: row;
+        margin: 5px 0;
+        .title {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            width: 40%;
+            flex-direction: row;
+            ion-icon {
+                color: green;
+                font-size: 2em;
+            }
+            h1 {
+                padding: 0;
+                margin: 0;
+                margin-left: 10px;
+                font-size: 1.4em;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: rgb(65, 66, 75);
+            }
+        }
+
+        .searchandupload {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            flex-direction: row;
+            width: 60%;
+            .boxsearch {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                flex-direction: row;
+                width: 60%;
+                position: relative;
+                .searchbar {
+                    border-radius: 20px;
+                    font-size: 1.2em;
+                    padding-left: 10px;
+                    padding-right: 25px;
+
+                    border: 2px solid black;
+                }
+
+                ion-icon {
+                    position: absolute;
+                    font-size: 1.2em;
+                    right: 4px;
+                    padding: 3px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    top: 10%;
+                }
+
+                ion-icon:hover {
+                    color: #9a9a9a;
+                }
+            }
+        }
+    }
+
+    .boxinfor {
+        height: 80%;
+        width: 100%;
+        // border: 1px solid black;
+        margin-top: 20px;
+
+        .listDocument {
+            height: 540px;
+            width: auto;
+            overflow-y: scroll;
+            list-style-type: none;
+            padding: 0;
+
+            .itemlistdocument {
+                font-size: 1.2em;
+                cursor: default;
+                padding: 10px 5px;
+                // border-bottom: 1px solid black;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 60px;
+
+                .cometoBlog {
+                    width: 80%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    h5 {
+                        color: #4d3737;
+                        padding: 0;
+                        margin: 0;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        cursor: pointer;
+                    }
+
+                    p {
+                        padding: 0;
+                        margin: 0;
+                        font-size: 0.9rem;
+                        // border: 1px solid #4d3737;
+                        color: black;
+                    }
+                }
+
+                .boxtool {
+                    padding: 0;
+                    margin: 0 10px 0 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .btndel {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                        margin-left: 8px;
+                        border-radius: 20%;
+
+                        ion-icon {
+                            font-size: 1.5rem;
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+                    .btnedit {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                        border-radius: 20%;
+
+                        ion-icon {
+                            font-size: 1.5rem;
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+
+                    .btndel:hover {
+                        background-color: #ff5d5d;
+                        ion-icon {
+                            color: rgb(0, 0, 0);
+                        }
+                    }
+
+                    .btnedit:hover {
+                        background-color: #b3d4ff;
+                        i {
+                            color: rgb(0, 0, 0);
+                        }
+                    }
+                }
+            }
+            .itemlistdocument:hover {
+                background-color: rgb(243, 243, 230);
+            }
+
+            .itemlistdocument:not(:last-child) {
+                border-bottom: 2px solid rgb(184, 184, 184);
+            }
+        }
+
+        .blog-post-show {
+            background-color: #78a784;
+            padding: 10px;
+            border-radius: 5px;
+            height: 550px;
+
+            .header-blog-post {
+                cursor: default;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 5px;
+                width: 100%;
+                height: 15%;
+
+                .boxLeftHeader {
+                    display: flex;
+                    justify-content: left;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    width: 80%;
+                    h3 {
+                        text-align: justify;
+                        padding: 0;
+                        margin: 0;
+                        color: white;
+                        font-size: 28px;
+                        font-weight: bold;
+                    }
+
+                    #BtnBack {
+                        display: flex;
+                        align-items: center;
+                        background-color: #333;
+                        border-radius: 50%;
+                        margin-right: 10px;
+                        ion-icon {
+                            font-size: 35px;
+                            color: white;
+                            padding: 0;
+                            margin: 0;
+                        }
+
+                        ion-icon:hover {
+                            color: yellow;
+                        }
+                    }
+                }
+
+                p {
+                    width: 20%;
+                    padding: 0;
+                    margin: 0;
+                    color: rgba(255, 255, 255, 0.468);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    ion-icon {
+                        padding: 0;
+                        margin: 0 5px;
+                        font-size: 20px;
+                    }
+
+                    a {
+                        padding: 0;
+                        margin: 0 5px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        ion-icon {
+                            padding: 0;
+                            margin: 0 5px;
+                            font-size: 25px;
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            .blog-content {
+                height: 83%;
+                margin-bottom: 10px;
+                .blog-content-Center {
+                    height: 100%;
+                    overflow-y: auto;
+                    overflow-x: hidden;
+                    background-color: #3c6b5b75;
+                    padding: 10px;
+                    color: #ffffff;
+                    border-radius: 5px;
+                    text-align: justify;
+                }
+            }
+
+            .blog-content-Center::-webkit-scrollbar {
+                width: 2px; /* Độ rộng của thanh cuộn */
+                background-color: #2f7a6f4e;
+            }
+
+            /* Phần đường viền của thanh cuộn */
+            .blog-content-Center::-webkit-scrollbar-track {
+                background: #f1f1f11d; /* Màu nền của thanh cuộn */
+                border-radius: 10px;
+            }
+
+            /* Phần "cán" của thanh cuộn */
+            .blog-content-Center::-webkit-scrollbar-thumb {
+                background: #d5e4e1ce; /* Màu "cán" của thanh cuộn */
+                border-radius: 10px;
+            }
+
+            /* Màu "cán" khi hover */
+            .blog-content-Center::-webkit-scrollbar-thumb:hover {
+                background: #555; /* Màu "cán" khi hover */
+                border-radius: 10px;
+            }
+        }
+    }
+}

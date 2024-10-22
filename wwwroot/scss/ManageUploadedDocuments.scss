@@ -1,0 +1,214 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.bodypersonalinformation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    .boxbanner {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        width: 100%;
+        height: 20%;
+        flex-direction: row;
+        margin: 5px 0;
+        .title {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            width: 40%;
+            flex-direction: row;
+            ion-icon {
+                color: green;
+                font-size: 2em;
+            }
+            h1 {
+                padding: 0;
+                margin: 0;
+                margin-left: 10px;
+                font-size: 1.4em;
+                font-weight: 700;
+                text-transform: uppercase;
+                color: rgb(65, 66, 75);
+            }
+        }
+
+        .searchandupload {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            flex-direction: row;
+            width: 60%;
+            .boxsearch {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                flex-direction: row;
+                width: 60%;
+                position: relative;
+                .searchbar {
+                    border-radius: 20px;
+                    font-size: 1.2em;
+                    padding-left: 10px;
+                    padding-right: 25px;
+
+                    border: 2px solid black;
+                }
+
+                button {
+                    position: absolute;
+                    right: 5px;
+                    top: 2px;
+                    padding: 0;
+                    margin: 0;
+                    border: none;
+                    background-color: transparent;
+                    cursor: pointer;
+                    ion-icon {
+                        font-size: 1.2em;
+                        right: 4px;
+                        padding: 3px;
+                        border-radius: 20px;
+                        cursor: pointer;
+                        top: 10%;
+                    }
+
+                    &:hover {
+                        color: #9a9a9a;
+                    }
+                }
+            }
+
+            .btnUpload {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                margin-left: 25px;
+                padding: 4px 10px;
+                border-radius: 5px;
+                border: none;
+                background-color: rgb(138, 227, 138);
+                transition: background-color 0.3 ease;
+                font-weight: 600;
+                ion-icon {
+                    font-size: 2em;
+                    margin-right: 5px;
+                }
+            }
+
+            .btnUpload:hover {
+                background-color: rgb(0, 185, 74);
+            }
+        }
+    }
+
+    .boxinfor {
+        height: 80%;
+        width: 100%;
+        // border: 1px solid black;
+        margin-top: 20px;
+
+        .listDocument {
+            height: 540px;
+            width: auto;
+            overflow-y: scroll;
+            list-style-type: none;
+            padding: 0;
+
+            .itemlistdocument {
+                font-size: 1.2em;
+                cursor: default;
+                padding: 10px 5px;
+                // border-bottom: 1px solid black;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 60px;
+
+                h5 {
+                    color: #4d3737;
+                    padding: 0;
+                    margin: 0;
+                    width: 40%;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    cursor: pointer;
+                }
+
+                p {
+                    padding: 0;
+                    margin: 0;
+                    font-size: 0.9rem;
+                }
+
+                .boxtool {
+                    padding: 0;
+                    margin: 0 10px 0 0;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .btndel {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                        margin-left: 8px;
+                        border-radius: 20%;
+                        ion-icon {
+                            font-size: 1.5rem;
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+                    .btnedit {
+                        padding: 0;
+                        margin: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        padding: 10px;
+                        border-radius: 20%;
+                        i {
+                            font-size: 1.4rem;
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+
+                    .btndel:hover {
+                        background-color: #ff5d5d;
+                        ion-icon {
+                            color: rgb(0, 0, 0);
+                        }
+                    }
+
+                    .btnedit:hover {
+                        background-color: #b3d4ff;
+                        i {
+                            color: rgb(0, 0, 0);
+                        }
+                    }
+                }
+            }
+            .itemlistdocument:hover {
+                background-color: rgb(243, 243, 230);
+            }
+
+            .itemlistdocument:not(:last-child) {
+                border-bottom: 2px solid rgb(184, 184, 184);
+            }
+        }
+    }
+}

@@ -1,0 +1,430 @@
+#bodyCoins {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  background-color: #f0f0f0;
+  position: relative;
+}
+#bodyCoins .container {
+  display: flex;
+  margin: 0 auto;
+  gap: 10px;
+}
+#bodyCoins .container .point-management,
+#bodyCoins .container .point-packages {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+}
+#bodyCoins .container .point-management h2,
+#bodyCoins .container .point-packages h2 {
+  margin-top: 0;
+}
+#bodyCoins .container .point-management {
+  flex: 2;
+}
+#bodyCoins .container .point-management .current-points {
+  font-weight: bold;
+  border-bottom: 2px solid rgb(83, 83, 83);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#bodyCoins .container .point-management #history {
+  height: 500px;
+  overflow-y: auto;
+}
+#bodyCoins .container .point-management #history .history-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+#bodyCoins .container .point-management #history .history-item span {
+  font-size: 13px;
+}
+#bodyCoins .container .point-management #history .history-item .status-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 10px;
+}
+#bodyCoins .container .point-management #history .history-item .status-indicator.success {
+  background-color: #4caf50;
+}
+#bodyCoins .container .point-management #history .history-item .status-indicator.failed {
+  background-color: #f44336;
+}
+#bodyCoins .container .point-management #history .history-item.failed {
+  background-color: #ffebee;
+}
+#bodyCoins .container .point-packages {
+  flex: 1;
+}
+#bodyCoins .container .point-packages .headerBoxNapDiem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-bottom: 1rem;
+}
+#bodyCoins .container .point-packages .headerBoxNapDiem h2 {
+  font-size: 25px;
+  font-weight: 600;
+}
+#bodyCoins .container .point-packages .headerBoxNapDiem a {
+  background-color: #4caf50;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#bodyCoins .container .point-packages #packages {
+  height: 400px;
+  overflow-y: auto;
+}
+#bodyCoins .container .point-packages #packages .package-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+#bodyCoins .container .point-packages #packages .package-item:hover {
+  background-color: #95dc98;
+}
+#bodyCoins .container .point-packages .LuuY {
+  color: #2c81db;
+  font-weight: bold;
+}
+#bodyCoins .container .point-packages .LuuY p {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+#bodyCoins .container .point-packages .LuuY .boxYeuCauXacNhanNap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+#bodyCoins .container .point-packages .LuuY .boxYeuCauXacNhanNap ion-icon {
+  padding: 0;
+  margin: 0;
+}
+#bodyCoins .container .point-packages .LuuY .boxYeuCauXacNhanNap .btnYeuCauXacNhanNap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  text-align: center;
+  font-size: 12px;
+  color: rgb(79, 53, 53);
+  background-color: #ff7f76;
+  padding: 10px 5px;
+  border-radius: 6px;
+}
+#bodyCoins .container .point-packages .select-package {
+  width: 100%;
+  padding: 10px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 35px;
+}
+#bodyCoins .container .point-packages .select-package-active {
+  background-color: #4caf50;
+  font-weight: bold;
+  color: white;
+}
+#bodyCoins .container .point-packages .active-btn-nap {
+  background-color: #2c81db;
+  color: #ddd;
+}
+#bodyCoins .container .point-packages .active-btn-nap:hover {
+  background-color: #5596dc;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(45, 55, 72, 0.3568627451);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .headerTitleOverPlayDieuChinhDiem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .headerTitleOverPlayDieuChinhDiem .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .headerTitleOverPlayDieuChinhDiem .CloseOverPlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  background-color: #ffb5b5;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .headerTitleOverPlayDieuChinhDiem .CloseOverPlay ion-icon {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #0070f3;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .headerTitleOverPlayDieuChinhDiem .CloseOverPlay:hover {
+  background-color: #ff2e2e;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content {
+    flex-direction: row;
+  }
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .points-list {
+  padding-top: 10px;
+  flex: 2;
+  padding-right: 1.5rem;
+  border-right: 1px solid #e0e0e0;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .points-list h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .points-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .points-list ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f7fafc;
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .points-list ul li .RemoveMucNap,
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .points-list ul li button {
+  background-color: #e53e3e;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .points-list ul li .RemoveMucNap:hover,
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .points-list ul li button:hover {
+  background-color: #d41c1c;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .points-list #CapNhatDataVaoHeThong {
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 0.5rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .form-section {
+  flex: 2;
+  padding-top: 10px;
+  padding-left: 1.5rem;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .form-section .form-group {
+  margin-bottom: 1rem;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .form-section .form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .form-section .form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .form-section .form-group input:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.2);
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .form-section button[type=submit] {
+  width: 100%;
+  background-color: #3182ce;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .form-section button[type=submit]:hover {
+  background-color: #2768a5;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .form-section .result {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .form-section .result.hidden {
+  display: none;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .form-section .result p {
+  margin: 0.5rem 0;
+}
+#bodyCoins .ContaintOverPlayDieuChinhDiem .OverPlayDieuChinhDiem .content .form-section .result p:not(:first-child) {
+  font-weight: 600;
+}
+#bodyCoins #boxCard {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: rgba(45, 55, 72, 0.3568627451);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#bodyCoins #boxCard .card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+}
+#bodyCoins #boxCard .card .content {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  #bodyCoins #boxCard .card .content {
+    flex-direction: row;
+  }
+}
+#bodyCoins #boxCard .card .info {
+  padding: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+@media (min-width: 768px) {
+  #bodyCoins #boxCard .card .info {
+    width: 66.666%;
+    border-right: 1px solid #e0e0e0;
+    border-bottom: none;
+  }
+}
+#bodyCoins #boxCard .card .info h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+#bodyCoins #boxCard .card .info .field {
+  margin-bottom: 16px;
+}
+#bodyCoins #boxCard .card .info .field .label {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 4px;
+}
+#bodyCoins #boxCard .card .info .field .value {
+  font-weight: 500;
+}
+#bodyCoins #boxCard .card .qr-code {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 768px) {
+  #bodyCoins #boxCard .card .qr-code {
+    width: 33.333%;
+  }
+}
+#bodyCoins #boxCard .card .qr-code svg {
+  width: 128px;
+  height: 128px;
+}
+#bodyCoins #boxCard .card .qr-code p {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+#bodyCoins #boxCard .card .buttons {
+  padding: 24px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: flex-end;
+}
+#bodyCoins #boxCard .card .buttons .btn-primary {
+  background-color: #0070f3;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 8px;
+}
+#bodyCoins #boxCard .card .buttons .btn-secondary {
+  background-color: white;
+  color: #0070f3;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 8px;
+  border: 1px solid #0070f3;
+}
+@media (max-width: 768px) {
+  #bodyCoins .container {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=Coins.css.map */

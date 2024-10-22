@@ -1,0 +1,555 @@
+@charset "UTF-8";
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.honor-board {
+  background-color: #2f7a6f;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.honor-board h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.honor-board .member-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+.honor-board .member-list .member {
+  background-color: white;
+  color: #333;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.content {
+  display: flex;
+  gap: 8px;
+}
+.content .contentCenter {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+  background-color: #4a7a6f;
+  border-radius: 10px;
+  height: 700px;
+  padding: 20px;
+  /* Thanh cuộn */
+  /* Phần đường viền của thanh cuộn */
+  /* Phần "cán" của thanh cuộn */
+  /* Màu "cán" khi hover */
+}
+.content .contentCenter .TitleAndSearch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .contentCenter .TitleAndSearch h2 {
+  color: white;
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.content .contentCenter .TitleAndSearch .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.content .contentCenter .TitleAndSearch .search-container form {
+  display: flex;
+  position: relative;
+}
+.content .contentCenter .TitleAndSearch .search-container .search-input {
+  width: 180px;
+  padding: 0px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+.content .contentCenter .TitleAndSearch .search-container .search-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+.content .contentCenter .TitleAndSearch .search-container .search-button {
+  padding: 4px 10px;
+  background-color: #9cdba6;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.content .contentCenter .TitleAndSearch .search-container .search-button:hover {
+  background-color: #d8efd3;
+  color: rgb(70, 65, 104);
+}
+.content .contentCenter .blog-review {
+  position: relative;
+  overflow-x: hidden;
+}
+.content .contentCenter .blog-review .blog-post {
+  position: relative;
+  cursor: default;
+  background-color: #5f8a7f;
+  margin-bottom: 6px;
+  border-radius: 5px;
+}
+.content .contentCenter .blog-review .blog-post .item-blog-post {
+  transition: background-color ease 0.2s;
+  width: 72%;
+  height: 100%;
+  background-color: rgba(132, 255, 0, 0);
+  position: absolute;
+  border-radius: 5px;
+}
+.content .contentCenter .blog-review .blog-post .header-blog-post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.content .contentCenter .blog-review .blog-post .header-blog-post h3 {
+  cursor: default;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 20px;
+}
+.content .contentCenter .blog-review .blog-post .header-blog-post p {
+  cursor: default;
+  margin: 0;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .contentCenter .blog-review .blog-post .header-blog-post p ion-icon {
+  padding: 0;
+  margin: 0 5px;
+  font-size: 20px;
+}
+.content .contentCenter .blog-review .blog-post .header-blog-post p a {
+  padding: 0;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .contentCenter .blog-review .blog-post .header-blog-post p a ion-icon {
+  padding: 0;
+  margin: 0 5px;
+  font-size: 25px;
+  color: white;
+}
+.content .contentCenter .blog-review .blog-post .item-blog-post:hover {
+  background-color: rgba(143, 202, 193, 0.0980392157);
+}
+.content .contentCenter .blog-review .blog-post-show {
+  background-color: #5f8a7f;
+  padding: 10px;
+  border-radius: 5px;
+  height: 600px;
+  /* Phần đường viền của thanh cuộn */
+  /* Phần "cán" của thanh cuộn */
+  /* Màu "cán" khi hover */
+}
+.content .contentCenter .blog-review .blog-post-show .header-blog-post {
+  cursor: default;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  width: 100%;
+  height: 15%;
+}
+.content .contentCenter .blog-review .blog-post-show .header-blog-post .boxLeftHeader {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 80%;
+}
+.content .contentCenter .blog-review .blog-post-show .header-blog-post .boxLeftHeader h3 {
+  text-align: justify;
+  padding: 0;
+  margin: 0;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+.content .contentCenter .blog-review .blog-post-show .header-blog-post .boxLeftHeader #BtnBack {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.content .contentCenter .blog-review .blog-post-show .header-blog-post .boxLeftHeader #BtnBack ion-icon {
+  font-size: 35px;
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+.content .contentCenter .blog-review .blog-post-show .header-blog-post .boxLeftHeader #BtnBack ion-icon:hover {
+  color: yellow;
+}
+.content .contentCenter .blog-review .blog-post-show .header-blog-post p {
+  width: 20%;
+  padding: 0;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.468);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .contentCenter .blog-review .blog-post-show .header-blog-post p ion-icon {
+  padding: 0;
+  margin: 0 5px;
+  font-size: 20px;
+}
+.content .contentCenter .blog-review .blog-post-show .header-blog-post p a {
+  padding: 0;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .contentCenter .blog-review .blog-post-show .header-blog-post p a ion-icon {
+  padding: 0;
+  margin: 0 5px;
+  font-size: 25px;
+  color: white;
+}
+.content .contentCenter .blog-review .blog-post-show .blog-content {
+  height: 83%;
+  margin-bottom: 10px;
+}
+.content .contentCenter .blog-review .blog-post-show .blog-content .blog-content-Center {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: rgba(60, 107, 91, 0.4588235294);
+  padding: 10px;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: justify;
+}
+.content .contentCenter .blog-review .blog-post-show .blog-content-Center::-webkit-scrollbar {
+  width: 2px; /* Độ rộng của thanh cuộn */
+  background-color: rgba(47, 122, 111, 0.3058823529);
+}
+.content .contentCenter .blog-review .blog-post-show .blog-content-Center::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.1137254902); /* Màu nền của thanh cuộn */
+  border-radius: 10px;
+}
+.content .contentCenter .blog-review .blog-post-show .blog-content-Center::-webkit-scrollbar-thumb {
+  background: rgba(213, 228, 225, 0.8078431373); /* Màu "cán" của thanh cuộn */
+  border-radius: 10px;
+}
+.content .contentCenter .blog-review .blog-post-show .blog-content-Center::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Màu "cán" khi hover */
+  border-radius: 10px;
+}
+.content .contentCenter .blog-review .article_FormPostBlog {
+  background-color: #5f8a7f;
+  padding: 10px;
+  border-radius: 5px;
+  height: 600px;
+}
+.content .contentCenter .blog-review .article_FormPostBlog .form-container {
+  padding: 20px;
+  height: 100%;
+  width: 100%;
+}
+.content .contentCenter .blog-review .article_FormPostBlog .form-container form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.content .contentCenter .blog-review .article_FormPostBlog .form-container form .form-group {
+  margin-bottom: 15px;
+}
+.content .contentCenter .blog-review .article_FormPostBlog .form-container form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+.content .contentCenter .blog-review .article_FormPostBlog .form-container form .form-group input[type=text],
+.content .contentCenter .blog-review .article_FormPostBlog .form-container form .form-group textarea {
+  width: 100%;
+  padding: 8px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-radius: 4px;
+}
+.content .contentCenter .blog-review .article_FormPostBlog .form-container form .form-group textarea {
+  height: 370px;
+  max-height: 370px;
+  resize: vertical;
+}
+.content .contentCenter .blog-review .article_FormPostBlog .form-container form .BtnBackAndPost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .contentCenter .blog-review .article_FormPostBlog .form-container form .BtnBackAndPost a,
+.content .contentCenter .blog-review .article_FormPostBlog .form-container form .BtnBackAndPost button {
+  background-color: #374b47;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+  border-radius: 10px;
+}
+.content .contentCenter .blog-review .article_FormPostBlog .form-container form .BtnBackAndPost a:hover,
+.content .contentCenter .blog-review .article_FormPostBlog .form-container form .BtnBackAndPost button:hover {
+  background-color: #b3b3b3;
+}
+.content .contentCenter .blog-review::-webkit-scrollbar {
+  width: 3px; /* Độ rộng của thanh cuộn */
+}
+.content .contentCenter .blog-review::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.5137254902); /* Màu nền của thanh cuộn */
+  border-radius: 10px;
+}
+.content .contentCenter .blog-review::-webkit-scrollbar-thumb {
+  background: #45454b; /* Màu "cán" của thanh cuộn */
+  border-radius: 10px;
+}
+.content .contentCenter .blog-review::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Màu "cán" khi hover */
+  border-radius: 10px;
+}
+.content .sidebar {
+  flex: 1;
+  height: 700px;
+}
+.content .sidebar .Box_Post_Blog {
+  border-radius: 10px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.content .sidebar .Box_Post_Blog .BoxbtnPostBlog,
+.content .sidebar .Box_Post_Blog .BoxNotifications,
+.content .sidebar .Box_Post_Blog .Boxsetting {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4774a4;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: all ease 0.2s;
+  margin: 0 4px;
+}
+.content .sidebar .Box_Post_Blog .BoxbtnPostBlog a,
+.content .sidebar .Box_Post_Blog .BoxNotifications a,
+.content .sidebar .Box_Post_Blog .Boxsetting a {
+  padding: 15px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+.content .sidebar .Box_Post_Blog .BoxbtnPostBlog a ion-icon,
+.content .sidebar .Box_Post_Blog .BoxNotifications a ion-icon,
+.content .sidebar .Box_Post_Blog .Boxsetting a ion-icon {
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+}
+.content .sidebar .Box_Post_Blog .BoxbtnPostBlog {
+  flex: 4;
+  width: 100%;
+}
+.content .sidebar .Box_Post_Blog .BoxbtnPostBlog a {
+  width: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+}
+.content .sidebar .Box_Post_Blog .BoxbtnPostBlog a ion-icon {
+  padding: 0;
+  margin: 0 5px 0 0;
+}
+.content .sidebar .Box_Post_Blog .BoxNotifications {
+  flex: 1;
+  background-color: #009bf5;
+}
+.content .sidebar .Box_Post_Blog .Boxsetting {
+  flex: 1;
+  background-color: #003574;
+}
+.content .sidebar .Box_Post_Blog .BoxbtnPostBlog:hover {
+  background-color: #1e3e62;
+  color: rgb(255, 255, 255);
+}
+.content .sidebar .Box_Post_Blog .BoxNotifications:hover {
+  background-color: rgba(0, 155, 245, 0.537254902);
+}
+.content .sidebar .Box_Post_Blog .Boxsetting:hover {
+  background-color: rgba(103, 86, 117, 0.8117647059);
+}
+.content .sidebar .latest-comments,
+.content .sidebar .support {
+  background-color: #444;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.content .sidebar .latest-comments h2,
+.content .sidebar .support h2 {
+  margin-top: 0;
+  font-size: 20px;
+  font-weight: bolder;
+}
+.content .sidebar .latest-comments ul,
+.content .sidebar .support ul {
+  list-style-type: none;
+  padding: 0;
+  height: 93%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.content .sidebar .latest-comments ul li,
+.content .sidebar .support ul li {
+  background-color: #555;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content .sidebar .latest-comments ul li a,
+.content .sidebar .support ul li a {
+  border-radius: 5px;
+  padding: 5px 10px;
+  width: 100%;
+  font-size: 16px;
+  color: white;
+  background-color: rgba(175, 215, 209, 0);
+  transition: background-color ease 0.25s;
+}
+.content .sidebar .latest-comments ul li a:hover,
+.content .sidebar .support ul li a:hover {
+  background-color: rgba(143, 202, 193, 0.0980392157);
+}
+.content .sidebar .latest-comments ul::-webkit-scrollbar,
+.content .sidebar .support ul::-webkit-scrollbar {
+  width: 3px; /* Độ rộng của thanh cuộn */
+  display: none;
+}
+.content .sidebar .latest-comments {
+  height: 65%;
+}
+.content .sidebar .support {
+  height: 25%;
+}
+.content .sidebar .support .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.content .sidebar .support .content .info {
+  text-align: justify;
+  font-size: 15px;
+}
+.content .sidebar .support .content .info .thank-you {
+  color: #84ff00;
+  font-weight: bold;
+  font-size: 18px;
+}
+.content .sidebar .support .content .QR_donate {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+@keyframes slideLeftOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideLeftIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRightIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slideRightOut {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+.hidden-animation {
+  animation: slideLeftOut 0.3s forwards; /* Điều chỉnh thời gian animation theo ý bạn */
+}
+
+.hidden-pre-animation {
+  animation: slideRightOut 0.3s forwards; /* Điều chỉnh thời gian animation theo ý bạn */
+}
+
+.show-animation {
+  animation: slideRightIn 0.3s forwards; /* Animation di chuyển từ phải qua trái và xuất hiện */
+}
+
+.show-pre-animation {
+  animation: slideLeftIn 0.3s forwards; /* Animation di chuyển từ phải qua trái và xuất hiện */
+}
+
+/*# sourceMappingURL=Community.css.map */

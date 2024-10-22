@@ -1,0 +1,50 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @* ViewData["Title"] = "Tài khoản"; *@
+}
+<link rel="stylesheet" href="~/css/account.css" asp-append-version="true" />
+
+
+<div class="container mt-3 mb-3 bodyAccount">
+    <div class="infor">
+        <div class="boxavarta">
+            <img src="~/img/anhtam.png" alt="">
+            <h2>@ViewBag.UserName</h2>
+        </div>
+        <ul class="listinfor">
+
+            <li class="itemlistinfor"><a href="/account"><ion-icon name="person-outline"></ion-icon>Thông tin cá
+                    nhân</a></li>
+
+            <li class="itemlistinfor"><a href="/account/ManageUploadedDocuments"><ion-icon
+                        name="cloud-upload-outline"></ion-icon>Tài liệu đã đăng</a>
+            </li>
+
+            <li hidden class="itemlistinfor"><a href="/account/SavedDocument"><ion-icon
+                        name="file-tray-stacked-outline"></ion-icon>Bài viết đã lưu</a></li>
+
+            <li class="itemlistinfor"><a href="/account/BaiVietDaDang"><ion-icon
+                        name="information-circle-outline"></ion-icon>Bài viết đã đăng</a></li>
+
+            <li hidden class="itemlistinfor"><a href="/account/Feedback"><i class="fa-regular fa-comment"></i>Góp ý chức
+                    năng</a>
+            </li>
+
+            <li class="itemlistinfor">ngăn cách</li>
+
+            <li class="itemlistinfor">
+                <form asp-action="Logout" method="post">
+                    <button type="submit" class="btnsubmitLogOut">
+                        <ion-icon name="log-out-outline"></ion-icon>
+                        Đăng xuất
+                    </button>
+                </form>
+            </li>
+
+
+        </ul>
+    </div>
+    <div class="infordetail">
+        @RenderBody()
+    </div>
+</div>
