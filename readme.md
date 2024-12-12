@@ -13,7 +13,7 @@ npm install -g sass
 
 "sass": "sass --watch wwwroot/scss:wwwroot/css"
 
-npm run sass : trình biên dịch scss
+npm run sass : run để chạy trình biên dịch scss
 
 //---------------------------------
 _các thư viện cần thiết cho code sql vào web_

@@ -8,20 +8,27 @@
 <link rel="stylesheet" href="~/css/BaiVietDaDang.css" asp-append-version="true" />
 
 <ul class="listDocument" id="listDocument">
-    @foreach (var item in Model)
+    @if (Model != null)
     {
-        <li class="itemlistdocument">
-            <a class="cometoBlog" href="/account/BaiVietDaDang/Docbaiviet/@item.BlogID" data-idblog="@item.BlogID">
-                @* <a class="cometoBlog" data-idblog="@item.BlogID"> *@
-                <h5>@item.BlogName</h5>
-                <p>Ngày đăng: @item.CreatedDate.ToString("dd-MM-yyyy")</p>
-            </a>
-            <div class="boxtool">
-                <a href="/account/BaiVietDaDang/ChinhSuaBaiViet/@item.BlogID" class="btnedit"><i
-                        class="fa-regular fa-pen-to-square"></i></a>
-                <a href="#" class="btndel" data-idblog="@item.BlogID"><ion-icon name="trash-outline"></ion-icon></a>
-            </div>
-        </li>
+        @foreach (var item in Model)
+        {
+            <li class="itemlistdocument">
+                <a class="cometoBlog" href="/account/BaiVietDaDang/Docbaiviet/@item.BlogID" data-idblog="@item.BlogID">
+                    @* <a class="cometoBlog" data-idblog="@item.BlogID"> *@
+                    <h5>@item.BlogName</h5>
+                    <p>Ngày đăng: @item.CreatedDate.ToString("dd-MM-yyyy")</p>
+                </a>
+                <div class="boxtool">
+                    <a href="/account/BaiVietDaDang/ChinhSuaBaiViet/@item.BlogID" class="btnedit"><i
+                            class="fa-regular fa-pen-to-square"></i></a>
+                    <a href="#" class="btndel" data-idblog="@item.BlogID"><ion-icon name="trash-outline"></ion-icon></a>
+                </div>
+            </li>
+        }
+    }
+    else
+    {
+        <h3>Không có bài viết nào</h3>
     }
 </ul>
 

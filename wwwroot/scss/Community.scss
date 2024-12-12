@@ -505,13 +505,17 @@ body {
                     justify-content: center;
                     align-items: center;
                     a {
-                        border-radius: 5px;
                         padding: 5px 10px;
+                        border-radius: 5px;
                         width: 100%;
                         font-size: 16px;
                         color: white;
                         background-color: #afd7d100;
                         transition: background-color ease 0.25s;
+                    }
+                    p {
+                        padding: 0 5px;
+                        margin: 0;
                     }
 
                     a:hover {

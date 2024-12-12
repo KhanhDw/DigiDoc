@@ -19,8 +19,15 @@ namespace WebApplication1.Controllers
             int userIdClaimINT = 0;
 
             string userIdClaim = User.FindFirst("UserID")?.Value ?? "";
-            var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
-            ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+            if (userIdClaim == "")
+            {
+                ViewBag.DiemTieuTaiFile = 0;
+            }
+            else
+            {
+                var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
+                ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+            }
 
             if (!userIdClaim.IsNullOrEmpty())
             {
@@ -113,63 +120,71 @@ namespace WebApplication1.Controllers
         [HttpGet("DetailDoc/download/{iddoc}")]
         public async Task<IActionResult> DownloadPdf(int iddoc)
         {
-            var sach = await _context.Books.FirstOrDefaultAsync(b => b.BookID == iddoc);
 
             string userIdClaim = User.FindFirst("UserID")?.Value ?? "";
-            var Diem = await _context.Users.FirstOrDefaultAsync(b => b.UserID == Convert.ToInt32(userIdClaim));
-            ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
-
-
-
-            // System.Diagnostics.Debug.WriteLine("--->>>>>--->>--->" + Diem?.UserID);
-
-            if (sach != null && Diem != null)
+            if (userIdClaim == "")
             {
+                ViewBag.DiemTieuTaiFile = 0;
 
-                if (Diem.PointsDownloadFile < Convert.ToInt32(sach.Price))
+            }
+            else
+            {
+                var sach = await _context.Books.FirstOrDefaultAsync(b => b.BookID == iddoc);
+                var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
+                ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+
+
+
+                // System.Diagnostics.Debug.WriteLine("--->>>>>--->>--->" + Diem?.UserID);
+
+                if (sach != null && Diem != null)
                 {
-                    // return RedirectToAction("ChanTaiFile_KhongDuDiem");
-                    // return RedirectToAction("Index", new { iddoc = iddoc });
-                }
-                else
-                {
-                    // System.Diagnostics.Debug.WriteLine("-gia->>>>>->>->" + Convert.ToInt32(sach.Price));
-                    sach.DownloadFile += 1;
-                    Diem.PointsDownloadFile -= Convert.ToInt32(sach.Price);
 
-                    ViewBag.DiemTieuTaiFile = Diem.PointsDownloadFile;
-
-                    _context.Books.Update(sach);
-                    _context.Users.Update(Diem);
-                    await _context.SaveChangesAsync();
-
-
-                    /// <summary>
-                    /// file download
-                    /// </summary>
-                    string? filePath = "";
-
-                    // Đường dẫn tới file PDF trên hệ thống
-                    if (sach?.FileDoc != null)
+                    if (Diem.PointsDownloadFile < Convert.ToInt32(sach.Price))
                     {
-                        filePath = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/storage/filedoc/{sach?.FileDoc}");
+                        // return RedirectToAction("ChanTaiFile_KhongDuDiem");
+                        // return RedirectToAction("Index", new { iddoc = iddoc });
                     }
-
-                    var fileBytes = System.IO.File.ReadAllBytes(filePath);
-
-                    if (!System.IO.File.Exists(filePath))
+                    else
                     {
-                        return NotFound(); // Trả về 404 nếu file không tồn tại
+                        // System.Diagnostics.Debug.WriteLine("-gia->>>>>->>->" + Convert.ToInt32(sach.Price));
+                        sach.DownloadFile += 1;
+                        Diem.PointsDownloadFile -= Convert.ToInt32(sach.Price);
+
+                        ViewBag.DiemTieuTaiFile = Diem.PointsDownloadFile;
+
+                        _context.Books.Update(sach);
+                        _context.Users.Update(Diem);
+                        await _context.SaveChangesAsync();
+
+
+                        /// <summary>
+                        /// file download
+                        /// </summary>
+                        string? filePath = "";
+
+                        // Đường dẫn tới file PDF trên hệ thống
+                        if (sach?.FileDoc != null)
+                        {
+                            filePath = Path.Combine(Directory.GetCurrentDirectory(), $"wwwroot/storage/filedoc/{sach?.FileDoc}");
+                        }
+
+                        var fileBytes = System.IO.File.ReadAllBytes(filePath);
+
+                        if (!System.IO.File.Exists(filePath))
+                        {
+                            return NotFound(); // Trả về 404 nếu file không tồn tại
+                        }
+
+                        var fileBytesName = System.IO.File.ReadAllBytes(filePath);
+
+                        // Đổi tên file khi tải xuống
+                        string newFileNameChanged = sach?.Title + ".pdf"; // Thay đổi tên file tại đây
+
+
+                        // Trả về file để tải xuống
+                        return File(fileBytesName, "application/pdf", newFileNameChanged);
                     }
-
-                    var fileBytesName = System.IO.File.ReadAllBytes(filePath);
-
-                    // Đổi tên file khi tải xuống
-                    string newFileNameChanged = sach?.Title + ".pdf"; // Thay đổi tên file tại đây
-
-
-                    // Trả về file để tải xuống
-                    return File(fileBytesName, "application/pdf", newFileNameChanged);
                 }
             }
             return NotFound();
@@ -190,29 +205,45 @@ namespace WebApplication1.Controllers
         [ValidateAntiForgeryToken]// chỉ chấp nhận dữ liệu hợp lệ
         public async Task<IActionResult> PostComment()
         {
-            // dùng request để lấy dữ liệu từ form
-            string? BookIDComment = Request.Form["BookIDComment"];
-            string? contentOfCommentFromUser = Request.Form["contentOfCommentFromUser"];
 
-            if (BookIDComment != null && contentOfCommentFromUser != null)
+
+            string userIdClaim = User.FindFirst("UserID")?.Value ?? "";
+            if (userIdClaim == "")
             {
-                var newComment = new Comment
-                {
-                    Bookid = Int32.Parse(BookIDComment),
-                    Content = contentOfCommentFromUser,
-                    UserId = Int32.Parse(User.FindFirst("UserID")?.Value ?? ""),
-                    CreatedDate = DateTime.Now,
-                };
-
-                // Thêm comment vào database
-                _context.Comments.Add(newComment);
-                await _context.SaveChangesAsync(); // Lưu thay đổi vào database
-
-                return Redirect(Request.Headers.Referer.ToString());// reload page current
-
+                ViewBag.DiemTieuTaiFile = 0;
+                return RedirectToAction("Index", "Login");
             }
+            else
+            {
+                var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
+                ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
 
-            return View();
+                // dùng request để lấy dữ liệu từ form
+                string? BookIDComment = Request.Form["BookIDComment"];
+                string? contentOfCommentFromUser = Request.Form["contentOfCommentFromUser"];
+
+
+
+                if (BookIDComment != null && contentOfCommentFromUser != null)
+                {
+                    var newComment = new Comment
+                    {
+                        Bookid = Int32.Parse(BookIDComment),
+                        Content = contentOfCommentFromUser,
+                        UserId = Int32.Parse(User.FindFirst("UserID")?.Value ?? ""),
+                        CreatedDate = DateTime.Now,
+                    };
+
+                    // Thêm comment vào database
+                    _context.Comments.Add(newComment);
+                    await _context.SaveChangesAsync(); // Lưu thay đổi vào database
+
+                    return Redirect(Request.Headers.Referer.ToString());// reload page current
+
+                }
+                return View();
+            }
         }
+
     }
 }

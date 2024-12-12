@@ -19,19 +19,26 @@ namespace WebApplication1.Controllers
 
             string userIdClaim = User.FindFirst("UserID")?.Value ?? "";
             ViewBag.UserId = userIdClaim;
-            var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
-            ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
-
-            var lichSuNapVaHeThongNap = new LichSuNapvaHeThongNap
+            if (userIdClaim == "")
             {
-                ListHeThongDiemNap = _context.HeThongDiemNap.ToList(),
-                ListLichSuNapDiem = _context.LichSuNapDiem.Where(b => b.UserId == Convert.ToInt32(userIdClaim)).OrderByDescending(x => x.CreatedDate).ToList(),
-                UserId = Convert.ToInt32(userIdClaim),
-            };
+                ViewBag.DiemTieuTaiFile = 0;
+                return RedirectToAction("Index", "Login");
+            }
+            else
+            {
+                var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
+                ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+
+                var lichSuNapVaHeThongNap = new LichSuNapvaHeThongNap
+                {
+                    ListHeThongDiemNap = _context.HeThongDiemNap.ToList(),
+                    ListLichSuNapDiem = _context.LichSuNapDiem.Where(b => b.UserId == Convert.ToInt32(userIdClaim)).OrderByDescending(x => x.CreatedDate).ToList(),
+                    UserId = Convert.ToInt32(userIdClaim),
+                };
 
 
-
-            return View(lichSuNapVaHeThongNap);
+                return View(lichSuNapVaHeThongNap);
+            }
         }
 
 

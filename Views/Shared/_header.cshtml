@@ -2,8 +2,8 @@
     var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
     var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
     var currentUrl = Context.Request.Path.Value;
-    bool isHomePage = string.IsNullOrEmpty(currentUrl) || currentUrl == "/" || currentUrl.ToLower() == "/home" ||
-    currentUrl.ToLower() == "/Login" || currentUrl.ToLower() == "/Register";
+    bool isHomePage = string.IsNullOrEmpty(currentUrl) || currentUrl == "/" || currentUrl.ToLower() == "/home";
+    var currentPath = ViewContext.HttpContext.Request.Path;
 
 }
 
@@ -24,9 +24,7 @@
                                 name="home-outline"></ion-icon> TÀI LIỆU</a>
                     </li>
                     <li class="nav-item me-md-3">
-                        <a class="nav-link @(currentController == "CategoryBook" && currentAction == "Index" ? "active" : "")"
-                            asp-area="" asp-controller="CategoryBook" asp-action="Index"><ion-icon
-                                name="file-tray-stacked-outline"></ion-icon> THỂ LOẠI</a>
+                        <a class="nav-link @(currentController == "CategoryBook" && currentAction == "Index" ? "active" : "")" asp-area="" asp-controller="CategoryBook" asp-action="Index"><ion-icon name="file-tray-stacked-outline"></ion-icon> THỂ LOẠI</a>
                     </li>
                     <li class="nav-item me-md-3">
                         <a class="nav-link @(currentController == "Community" && currentAction == "Index" ? "active" : "")"
@@ -35,8 +33,7 @@
                     </li>
                 </ul>
 
-                @if (User.Identity != null && User.Identity.IsAuthenticated && (User.IsInRole("2") ||
-                User.IsInRole("3")))
+                @if (User.Identity != null && User.Identity.IsAuthenticated && (User.IsInRole("2") || User.IsInRole("3")))
                 {
                     <ul class="navbar-nav flex-grow-1 justify-content-center">
                         <li class="nav-item me-md-3">
@@ -61,6 +58,7 @@
                 {
 
                 }
+
                 @* @if (!isHomePage || currentPath != "/Login" || currentPath != "/Register") *@
                @*  @if (Context.Request.RouteValues["controller"]?.ToString() == "Login" &&
                    Context.Request.RouteValues["action"]?.ToString() == "Index") *@

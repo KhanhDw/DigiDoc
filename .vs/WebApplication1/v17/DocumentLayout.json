@@ -3,24 +3,28 @@
   "WorkspaceRootPath": "D:\\Winform WPT\\WebSach\\WebApplication1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|d:\\winform wpt\\websach\\webapplication1\\controllers\\documentsmanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|solutionrelative:controllers\\documentsmanagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|d:\\winform wpt\\websach\\webapplication1\\views\\docmarket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|solutionrelative:views\\docmarket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|d:\\winform wpt\\websach\\webapplication1\\wwwroot\\js\\header.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|",
-      "RelativeMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|solutionrelative:wwwroot\\js\\header.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|"
+      "AbsoluteMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|d:\\winform wpt\\websach\\webapplication1\\views\\community\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|solutionrelative:views\\community\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|d:\\winform wpt\\websach\\webapplication1\\views\\account\\manageuploadeddocuments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|solutionrelative:views\\account\\manageuploadeddocuments.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|d:\\winform wpt\\websach\\webapplication1\\wwwroot\\js\\community.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|",
+      "RelativeMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|solutionrelative:wwwroot\\js\\community.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|d:\\winform wpt\\websach\\webapplication1\\controllers\\communitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|solutionrelative:controllers\\communitycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|d:\\winform wpt\\websach\\webapplication1\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|d:\\winform wpt\\websach\\webapplication1\\wwwroot\\js\\manageuploadeddocuments.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|solutionrelative:wwwroot\\js\\manageuploadeddocuments.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|d:\\winform wpt\\websach\\webapplication1\\controllers\\categorybookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEFDCF8D-4666-4617-9E66-6F613F5FD585}|WebApplication1.csproj|solutionrelative:controllers\\categorybookcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,78 +34,103 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "DocumentsManageController.cs",
-              "DocumentMoniker": "D:\\Winform WPT\\WebSach\\WebApplication1\\Controllers\\DocumentsManageController.cs",
-              "RelativeDocumentMoniker": "Controllers\\DocumentsManageController.cs",
-              "ToolTip": "D:\\Winform WPT\\WebSach\\WebApplication1\\Controllers\\DocumentsManageController.cs",
-              "RelativeToolTip": "Controllers\\DocumentsManageController.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAAwBsAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T10:26:12.315Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "header.js",
-              "DocumentMoniker": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\header.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\header.js",
-              "ToolTip": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\header.js",
-              "RelativeToolTip": "wwwroot\\js\\header.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-22T04:23:02.724Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Winform WPT\\WebSach\\WebApplication1\\Views\\DocMarket\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\DocMarket\\Index.cshtml",
+              "ToolTip": "D:\\Winform WPT\\WebSach\\WebApplication1\\Views\\DocMarket\\Index.cshtml",
+              "RelativeToolTip": "Views\\DocMarket\\Index.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-12T08:21:23.458Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ManageUploadedDocuments.cshtml",
-              "DocumentMoniker": "D:\\Winform WPT\\WebSach\\WebApplication1\\Views\\Account\\ManageUploadedDocuments.cshtml",
-              "RelativeDocumentMoniker": "Views\\Account\\ManageUploadedDocuments.cshtml",
-              "ToolTip": "D:\\Winform WPT\\WebSach\\WebApplication1\\Views\\Account\\ManageUploadedDocuments.cshtml",
-              "RelativeToolTip": "Views\\Account\\ManageUploadedDocuments.cshtml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAMwCIAAAANAAAAAAAAAA==",
+              "Title": "Community.js",
+              "DocumentMoniker": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\Community.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\Community.js",
+              "ToolTip": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\Community.js",
+              "RelativeToolTip": "wwwroot\\js\\Community.js",
+              "ViewState": "AgIAANcAAAAAAAAAAAAgwOUAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-12T08:07:00.918Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Winform WPT\\WebSach\\WebApplication1\\Views\\Community\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Community\\Index.cshtml",
+              "ToolTip": "D:\\Winform WPT\\WebSach\\WebApplication1\\Views\\Community\\Index.cshtml",
+              "RelativeToolTip": "Views\\Community\\Index.cshtml",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAAAIUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-10-22T04:22:47.131Z",
+              "WhenOpened": "2024-12-12T07:59:44.559Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CommunityController.cs",
+              "DocumentMoniker": "D:\\Winform WPT\\WebSach\\WebApplication1\\Controllers\\CommunityController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CommunityController.cs",
+              "ToolTip": "D:\\Winform WPT\\WebSach\\WebApplication1\\Controllers\\CommunityController.cs",
+              "RelativeToolTip": "Controllers\\CommunityController.cs",
+              "ViewState": "AgIAAG4AAAAAAAAAAAApwH0AAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T07:56:47.248Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ManageUploadedDocuments.js",
-              "DocumentMoniker": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\ManageUploadedDocuments.js",
-              "RelativeDocumentMoniker": "wwwroot\\js\\ManageUploadedDocuments.js",
-              "ToolTip": "D:\\Winform WPT\\WebSach\\WebApplication1\\wwwroot\\js\\ManageUploadedDocuments.js",
-              "RelativeToolTip": "wwwroot\\js\\ManageUploadedDocuments.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-10-22T04:21:51.765Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "AccountController.cs",
               "DocumentMoniker": "D:\\Winform WPT\\WebSach\\WebApplication1\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
               "ToolTip": "D:\\Winform WPT\\WebSach\\WebApplication1\\Controllers\\AccountController.cs",
               "RelativeToolTip": "Controllers\\AccountController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAwwDAAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-22T03:48:54.306Z"
+              "WhenOpened": "2024-12-12T07:56:33.2Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CategoryBookController.cs",
+              "DocumentMoniker": "D:\\Winform WPT\\WebSach\\WebApplication1\\Controllers\\CategoryBookController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoryBookController.cs",
+              "ToolTip": "D:\\Winform WPT\\WebSach\\WebApplication1\\Controllers\\CategoryBookController.cs",
+              "RelativeToolTip": "Controllers\\CategoryBookController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T07:26:13.894Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 282,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             }
           ]
         }

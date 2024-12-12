@@ -2,6 +2,7 @@
 For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+   
 }
 
 @model List<Blog>
@@ -14,7 +15,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
     <div class="content">
         <div class="contentCenter">
             <div class="TitleAndSearch">
-                <h2>Bài viết cộng đồng</h2>
+                <h2 id="title_name">Bài viết cộng đồng</h2>
                 <div class="search-container">
                     <form asp-controller="Community" asp-action="SearchBlog" method="Post">
                         <input type="text" name="BlogName" placeholder="Tìm tên bài blog..." class="search-input">
@@ -41,6 +42,10 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                         </article>
                     }
                 }
+                else
+                {
+                    <p>Không tìm thấy bài viết nào</p>
+                }
 
                 @* <article class="blog-post" data-post-id="1">
                 <a class="item-blog-post" href="#"></a>
@@ -55,7 +60,7 @@ For more information on enabling MVC for empty projects, visit https://go.micros
 
 
 
-                @* Hiển thị bài viêt đã click *@
+                @* Hiển thị bài viêt đã chọn *@
                 <article id="blog-post-show" class="blog-post-show" hidden>
                     <div class="header-blog-post">
                         <div class="boxLeftHeader">
@@ -107,42 +112,64 @@ For more information on enabling MVC for empty projects, visit https://go.micros
                     </div>
                 </article>
 
+                @* ----------------- thông báo--------------------------- *@
+
+                <article id="Notification-show" class="Notification-show" hidden>
+                    <ul>
+                        @* @if (Model != null)
+                        {
+                            @foreach (var item in Model)
+                            {
+                                <li>
+                                    <a href="#" class="itemBlogXemNhieu" data_id_itemXemnhieu="@item.BlogID">@item.BlogName</a>
+                                    <i class="bi bi-eye"></i>
+                                    <p>@item.BlogViews</p>
+                                </li>
+                            }
+                        }
+                        else
+                        { *@
+                            <p>Không có thông báo nào</p>
+                        @* } *@
+                    </ul>
+                </article>
+
+
             </section>
         </div>
         <aside class="sidebar">
             <section class="Box_Post_Blog">
                 <div class="BoxbtnPostBlog">
-                    <a href="/home" id="btnPostBlog">
-                        <ion-icon name="add-circle"></ion-icon>Đăng bài viết
-                    </a>
+                    <a id="btnPostBlog" data-authenticated="@User?.Identity?.IsAuthenticated"><ion-icon name="add-circle"></ion-icon>Đăng bài viết</a>
                 </div>
                 <div class="BoxNotifications">
-                    <a href="/home" class="btnSetting"><ion-icon name="notifications"></ion-icon>+999</a>
+                    <a href="/home" id="btnNotification"><ion-icon name="notifications"></ion-icon>+999</a>
                 </div>
                 <div class="Boxsetting">
-                    <a href="/home" class="btnSetting"><ion-icon name="settings"></ion-icon></a>
+                    <a href="/home" id="btnSetting"><ion-icon name="settings"></ion-icon></a>
                 </div>
             </section>
             <section class="latest-comments">
-                <h2>Lịch sử xem</h2>
+                <h2>Bài được xem nhiều</h2>
                 <ul>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
-                    <li><a href="#">xin chào</a></li>
+                    @if (Model != null)
+                    {
+                        @foreach (var item in Model)
+                        {
+                            <li>
+                                <a href="#" class="itemBlogXemNhieu" data_id_itemXemnhieu="@item.BlogID">@item.BlogName</a>
+                                <i class="bi bi-eye"></i>
+                                <p>@item.BlogViews</p>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        <p>Không có bài viết nào</p>
+                    }
                 </ul>
+
+
             </section>
             <section class="support">
                 <h2>Ủng hộ page</h2>

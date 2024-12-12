@@ -447,13 +447,18 @@ body {
 }
 .content .sidebar .latest-comments ul li a,
 .content .sidebar .support ul li a {
-  border-radius: 5px;
   padding: 5px 10px;
+  border-radius: 5px;
   width: 100%;
   font-size: 16px;
   color: white;
   background-color: rgba(175, 215, 209, 0);
   transition: background-color ease 0.25s;
+}
+.content .sidebar .latest-comments ul li p,
+.content .sidebar .support ul li p {
+  padding: 0 5px;
+  margin: 0;
 }
 .content .sidebar .latest-comments ul li a:hover,
 .content .sidebar .support ul li a:hover {

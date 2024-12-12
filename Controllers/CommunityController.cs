@@ -23,8 +23,15 @@ namespace WebApplication1.Controllers
         {
 
             string userIdClaim = User.FindFirst("UserID")?.Value ?? "";
-            var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
-            ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+            if (userIdClaim == "")
+            {
+                ViewBag.DiemTieuTaiFile = 0;
+            }
+            else
+            {
+                var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
+                ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+            }
 
             // var email= HttpContext.Session.GetString(LoginController.SessionKeyEmail);
             // var username= HttpContext.Session.GetString(LoginController.SessionKeyUsername);
@@ -58,8 +65,15 @@ namespace WebApplication1.Controllers
         {
 
             string userIdClaim = User.FindFirst("UserID")?.Value ?? "";
-            var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
-            ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+            if (userIdClaim == "")
+            {
+                ViewBag.DiemTieuTaiFile = 0;
+            }
+            else
+            {
+                var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
+                ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+            }
 
 
             // Tìm bài viết dựa trên ID, sử dụng phương thức async
@@ -110,8 +124,16 @@ namespace WebApplication1.Controllers
         {
 
             string userIdClaim = User.FindFirst("UserID")?.Value ?? "";
-            var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
-            ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+            if (userIdClaim == "")
+            {
+                ViewBag.DiemTieuTaiFile = 0;
+                //return RedirectToAction("Index", "Login");
+            }
+            else
+            {
+                var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
+                ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+            }
 
 
             // Tạo một đối tượng Blog mới

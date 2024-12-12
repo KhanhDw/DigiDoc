@@ -16,8 +16,15 @@ namespace WebApplication1.Controllers
                 ViewBag.UserName = username;
 
                 string userIdClaim = User.FindFirst("UserID")?.Value ?? "";
-                var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
-                ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+                if (userIdClaim == "")
+                {
+                    ViewBag.DiemTieuTaiFile = 0;
+                }
+                else
+                {
+                    var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
+                    ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+                }
             }
 
 

@@ -15,10 +15,13 @@ namespace WebApplication1.Controllers
         {
             var username = User.Identity?.Name;
             ViewBag.UserName = username;
-
+            ViewBag.DiemTieuTaiFile = 0;
             string userIdClaim = User.FindFirst("UserID")?.Value ?? "";
-            var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
-            ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+            if (userIdClaim != "")
+            {
+                var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
+                ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
+            }
 
             // Lấy danh sách sách từ cơ sở dữ liệu
             var booksQuery = _context.Books.AsQueryable();

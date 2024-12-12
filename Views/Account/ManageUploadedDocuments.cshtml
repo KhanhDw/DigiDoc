@@ -31,21 +31,29 @@
     </div>
     <div class="boxinfor">
         <ul class="listDocument">
-            @foreach (var item in Model)
+            @if (Model != null)
             {
-                <li class="itemlistdocument">
-                    <a href="/detaildoc/@item.BookID">@item.Title</a>
-                    <p>Ngày đăng: @item.CreatedDate</p>
-                    <div class="boxtool">
-                        <a href="/UpdateDocument/Edit/@item.BookID" class="btnedit"><i
-                                class="fa-regular fa-pen-to-square"></i></a>
-                        <form asp-action="RemoveBookAccount" method="post" id="formDeleteBook">
-                            <input type="text" name="idBookDel" id="idBookDel" hidden value="@item.BookID">
-                            <a class="btndel" data-idBookRemove="@item.BookID"><ion-icon
-                                    name="trash-outline"></ion-icon></a>
-                        </form>
-                    </div>
-                </li>
+
+                @foreach (var item in Model)
+                {
+                    <li class="itemlistdocument">
+                        <a href="/detaildoc/@item.BookID">@item.Title</a>
+                        <p>Ngày đăng: @item.CreatedDate</p>
+                        <div class="boxtool">
+                            <a href="/UpdateDocument/Edit/@item.BookID" class="btnedit"><i
+                                    class="fa-regular fa-pen-to-square"></i></a>
+                            <form asp-action="RemoveBookAccount" method="post" id="formDeleteBook">
+                                <input type="text" name="idBookDel" id="idBookDel" hidden value="@item.BookID">
+                                <a class="btndel" data-idBookRemove="@item.BookID"><ion-icon
+                                        name="trash-outline"></ion-icon></a>
+                            </form>
+                        </div>
+                    </li>
+                }
+            }
+            else
+            {
+                <p>Bạn chưa tải lên tài liệu nào</p>
             }
         </ul>
     </div>
