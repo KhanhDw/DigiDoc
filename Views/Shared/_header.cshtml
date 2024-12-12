@@ -37,7 +37,6 @@
 
                 @if (User.Identity != null && User.Identity.IsAuthenticated && (User.IsInRole("2") ||
                 User.IsInRole("3")))
-
                 {
                     <ul class="navbar-nav flex-grow-1 justify-content-center">
                         <li class="nav-item me-md-3">
@@ -62,13 +61,20 @@
                 {
 
                 }
-                @if (!isHomePage)
+                @* @if (!isHomePage || currentPath != "/Login" || currentPath != "/Register") *@
+               @*  @if (Context.Request.RouteValues["controller"]?.ToString() == "Login" &&
+                   Context.Request.RouteValues["action"]?.ToString() == "Index") *@
+                @if (User.Identity != null && User.Identity.IsAuthenticated)
                 {
                     <a class="MarkForDownloadFile" href="/Coins">
                         <p>Điểm:</p>
                         <p id="DiemTieuDungHeader">@ViewBag.DiemTieuTaiFile</p>
                         <ion-icon name="add-circle-outline">
                     </a>
+                }
+                else
+                {
+
                 }
 
                 @if (User.Identity != null && User.Identity.IsAuthenticated)

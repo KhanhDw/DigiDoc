@@ -63,13 +63,13 @@ namespace WebApplication1.Controllers
         {
             var username = User.Identity?.Name;
             ViewBag.UserName = username;
-
+            ViewBag.DiemTieuTaiFile = 0;
             string userIdClaim = User.FindFirst("UserID")?.Value ?? "";
+            if (userIdClaim != "")
+            {
             var Diem = _context.Users.FirstOrDefault(b => b.UserID == Convert.ToInt32(userIdClaim));
             ViewBag.DiemTieuTaiFile = Diem?.PointsDownloadFile;
-
-
-            // ViewBag.CssPath = Url.Content("~/css/CategoryBook.css");
+            }
 
             var books1 = _context.Books.ToList();
 
@@ -128,7 +128,29 @@ namespace WebApplication1.Controllers
                 return View(books1);
             }
 
-            return View(books1);
+            try
+            {
+                // Lấy toàn bộ danh sách book
+                var allBooks = books1;
+                allBooks.Reverse();
+
+                // Số items trên mỗi trang
+                int pageSize = 6;
+                // Trang hiện tại (mặc định là 1)
+                int pageNumber = 1;
+
+                // Chuyển đổi từ List sang PaginatedList
+                var paginatedList = PaginatedList<Book>.Create(allBooks, pageNumber, pageSize);
+
+                return View(paginatedList);
+            }
+            catch (Exception)
+            {
+                // Log exception
+                return View("Error");
+            }
+
+            //return View(books1);
         }
 
         public List<Book> GetBookBySubject(string linhvuc)
